@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Réservation — Radisson Blu Tunis | Jektis Travel</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/reservation.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+  <body>
+    <!-- ══════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════ -->
+    <nav
+      id="navbar"
+      class="on-hero visible"
+      data-aos="fade-down"
+      style="background-color: #04152c"
+    >
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+          <img
+            src="../images/logo_jektis.png"
+            width="150"
+            alt="Jektis Travel Logo"
+            class="nav-logo-img"
+          />
+        </a>
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-map"></i> Séjours en Tunisie
+              <i class="fa-solid fa-chevron-down"></i
+            ></a>
+            <div class="dropdown">
+              <a href="#">Hôtels Tunis</a><a href="#">Hammamet</a
+              ><a href="#">Djerba</a> <a href="#">Sousse</a
+              ><a href="#">Monastir</a><a href="#">Mahdia</a>
+              <a href="#">Tabarka</a><a href="#">Tozeur</a
+              ><a href="#">Kairouan</a><a href="#">Sfax</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-globe"></i> Destinations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-plane"></i> Vols</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-id-card"></i> Visa</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-briefcase"></i> Espace Entreprise</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <a
+            href="../index.html"
+            class="btn btn-ghost"
+            style="font-size: 0.82rem; padding: 8px 18px"
+          >
+            <i class="fa-solid fa-arrow-left"></i> Retour
+          </a>
+          <button class="nav-login btn">
+            <i class="fa-regular fa-user"></i> Connexion
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ══ PAGE ═════════════════════════════════════ -->
+    <div class="res-page">
+      <!-- STEPPER -->
+      <div class="stepper">
+        <div class="stepper-inner">
+          <div class="step done">
+            <div class="step-circle">
+              <i class="fa-solid fa-check" style="font-size: 0.7rem"></i>
+            </div>
+            <span class="step-label">Sélection</span>
+          </div>
+          <div class="step active">
+            <div class="step-circle">2</div>
+            <span class="step-label">Coordonnées</span>
+          </div>
+          <div class="step">
+            <div class="step-circle">3</div>
+            <span class="step-label">Confirmation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRID -->
+      <div class="res-grid">
+        <!-- ══ LEFT — FORM ══════════════════════════ -->
+        <div>
+          <form id="res-form" novalidate>
+            <!-- ── 1. PERSONAL INFO ── -->
+            <div class="form-card" data-aos="fade-up">
+              <div class="form-card-head">
+                <div class="head-icon"><i class="fa-regular fa-user"></i></div>
+                <div>
+                  <h2>Vos Informations</h2>
+                  <p>Coordonnées du responsable de la réservation</p>
+                </div>
+              </div>
+              <div class="form-card-body">
+                <!-- Login shortcut -->
+                <div class="login-banner">
+                  <p>
+                    <strong>Déjà client ?</strong> Connectez-vous pour
+                    pré-remplir le formulaire.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket"></i> Se
+                    connecter</a
+                  >
+                </div>
+
+                <!-- Civilité -->
+                <div class="form-divider"><span>Civilité</span></div>
+                <div class="civil-group">
+                  <label class="civil-opt selected"
+                    ><input type="radio" name="civil" value="mr" checked />
+                    M.</label
+                  >
+                  <label class="civil-opt"
+                    ><input type="radio" name="civil" value="mme" /> Mme</label
+                  >
+                  <label class="civil-opt"
+                    ><input type="radio" name="civil" value="mlle" />
+                    Mlle</label
+                  >
+                </div>
+
+                <!-- Name / Email / Phone -->
+                <div class="form-row g2">
+                  <div class="field">
+                    <label>Prénom <span class="req">*</span></label>
+                    <input type="text" placeholder="Votre prénom" required />
+                  </div>
+                  <div class="field">
+                    <label>Nom <span class="req">*</span></label>
+                    <input
+                      type="text"
+                      placeholder="Votre nom de famille"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="form-row g2">
+                  <div class="field">
+                    <label>Email <span class="req">*</span></label>
+                    <input
+                      type="email"
+                      placeholder="exemple@email.com"
+                      required
+                    />
+                    <span class="hint"
+                      ><i
+                        class="fa-regular fa-envelope"
+                        style="margin-right: 4px"
+                      ></i
+                      >Confirmation envoyée à cette adresse</span
+                    >
+                  </div>
+                  <div class="field">
+                    <label>Mobile <span class="req">*</span></label>
+                    <input type="tel" placeholder="+216 XX XXX XXX" required />
+                    <span class="hint"
+                      ><i
+                        class="fa-regular fa-phone"
+                        style="margin-right: 4px"
+                      ></i
+                      >Pour vous contacter si besoin</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── 2. GUESTS ── -->
+            <div
+              class="form-card"
+              style="margin-top: 20px"
+              data-aos="fade-up"
+              data-aos-delay="60"
+            >
+              <div class="form-card-head">
+                <div class="head-icon"><i class="fa-solid fa-users"></i></div>
+                <div>
+                  <h2>Informations sur l'occupation</h2>
+                  <p>Noms tels qu'ils figurent sur le passeport</p>
+                </div>
+              </div>
+              <div class="form-card-body">
+                <div
+                  style="
+                    background: var(--primary-pale);
+                    border-radius: 10px;
+                    padding: 10px 14px;
+                    margin-bottom: 18px;
+                    font-size: 0.8rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 8px;
+                    align-items: center;
+                  "
+                >
+                  <i class="fa-solid fa-bed" style="color: var(--primary)"></i>
+                  <span
+                    ><strong>1 × Chambre Double</strong> — Logement Petit
+                    Déjeuner · Sur demande</span
+                  >
+                </div>
+
+                <!-- Guest 1 -->
+                <div class="guest-block">
+                  <div class="guest-block-head">
+                    <div class="guest-num">1</div>
+                    <span>Voyageur principal</span>
+                    <span class="guest-type-badge">Adulte</span>
+                  </div>
+                  <div
+                    class="guest-civil-group civil-group"
+                    style="margin-bottom: 16px"
+                  >
+                    <label class="civil-opt selected" data-val="mr"
+                      ><input type="radio" name="g1civil" /> M.</label
+                    >
+                    <label class="civil-opt" data-val="mme"
+                      ><input type="radio" name="g1civil" /> Mme</label
+                    >
+                    <label class="civil-opt" data-val="mlle"
+                      ><input type="radio" name="g1civil" /> Mlle</label
+                    >
+                  </div>
+                  <div class="form-row g2">
+                    <div class="field">
+                      <label>Prénom</label>
+                      <input type="text" placeholder="Prénom (passeport)" />
+                    </div>
+                    <div class="field">
+                      <label>Nom de famille</label>
+                      <input type="text" placeholder="Nom (passeport)" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guest 2 -->
+                <div class="guest-block">
+                  <div class="guest-block-head">
+                    <div
+                      class="guest-num"
+                      style="background: var(--primary-light)"
+                    >
+                      2
+                    </div>
+                    <span>Accompagnateur</span>
+                    <span class="guest-type-badge">Adulte</span>
+                  </div>
+                  <div
+                    class="guest-civil-group civil-group"
+                    style="margin-bottom: 16px"
+                  >
+                    <label class="civil-opt selected" data-val="mr"
+                      ><input type="radio" name="g2civil" /> M.</label
+                    >
+                    <label class="civil-opt" data-val="mme"
+                      ><input type="radio" name="g2civil" /> Mme</label
+                    >
+                    <label class="civil-opt" data-val="mlle"
+                      ><input type="radio" name="g2civil" /> Mlle</label
+                    >
+                  </div>
+                  <div class="form-row g2">
+                    <div class="field">
+                      <label>Prénom</label>
+                      <input type="text" placeholder="Prénom (passeport)" />
+                    </div>
+                    <div class="field">
+                      <label>Nom de famille</label>
+                      <input type="text" placeholder="Nom (passeport)" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Special wishes -->
+                <div class="form-divider">
+                  <span
+                    >Souhaits particuliers
+                    <small
+                      style="
+                        font-weight: 400;
+                        text-transform: none;
+                        letter-spacing: 0;
+                      "
+                      >(sous réserve de disponibilité)</small
+                    ></span
+                  >
+                </div>
+                <div class="wishes-grid">
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-bed"></i> Lit king size
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-stairs"></i> Étage élevé
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-eye"></i> Vue mer / ville
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-moon"></i> Arrivée tardive
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-baby"></i> Lit bébé
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-wheelchair"></i> Chambre accessible
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-smoking-ban"></i> Non-fumeur
+                  </div>
+                  <div class="wish-chip">
+                    <i class="fa-solid fa-heart"></i> Voyage de noce
+                  </div>
+                </div>
+                <div class="field" style="margin-top: 12px">
+                  <label>Autre demande spéciale</label>
+                  <textarea
+                    placeholder="Précisez votre demande ici..."
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- ── 3. PAYMENT ── -->
+            <div
+              class="form-card"
+              style="margin-top: 20px"
+              data-aos="fade-up"
+              data-aos-delay="120"
+            >
+              <div class="form-card-head">
+                <div class="head-icon">
+                  <i class="fa-solid fa-credit-card"></i>
+                </div>
+                <div>
+                  <h2>Mode de Paiement</h2>
+                  <p>Choisissez le mode qui vous convient</p>
+                </div>
+              </div>
+              <div class="form-card-body">
+                <div
+                  style="
+                    background: var(--primary-pale);
+                    border-radius: 10px;
+                    padding: 10px 14px;
+                    margin-bottom: 18px;
+                    font-size: 0.8rem;
+                    color: var(--text-2);
+                    line-height: 1.6;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-circle-info"
+                    style="color: var(--primary); margin-right: 6px"
+                  ></i>
+                  Le paiement en ligne garantit la disponibilité et les prix
+                  affichés. Pour les paiements en agence, ces éléments peuvent
+                  subir des changements.
+                </div>
+
+                <div class="payment-opts">
+                  <!-- Online -->
+                  <div class="pay-opt" data-pay="online">
+                    <div class="pay-recommended">Recommandé</div>
+                    <div class="pay-radio"></div>
+                    <div class="pay-opt-body">
+                      <div class="pay-opt-title">
+                        <i
+                          class="fa-solid fa-lock"
+                          style="color: var(--primary); margin-right: 6px"
+                        ></i
+                        >Paiement en ligne sécurisé
+                      </div>
+                      <div class="pay-opt-desc">
+                        Visa, Mastercard, Virement bancaire — Prix &amp; dispo
+                        garantis instantanément.
+                      </div>
+                    </div>
+                    <div class="pay-opt-amount">
+                      583,790
+                      <span
+                        style="
+                          font-size: 0.75rem;
+                          font-weight: 400;
+                          color: var(--text-muted);
+                        "
+                        >TND</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Agency full -->
+                  <div class="pay-opt selected" data-pay="agency-full">
+                    <div class="pay-radio"></div>
+                    <div class="pay-opt-body">
+                      <div class="pay-opt-title">
+                        <i
+                          class="fa-solid fa-building-columns"
+                          style="color: var(--primary); margin-right: 6px"
+                        ></i
+                        >Paiement total à l'agence
+                      </div>
+                      <div class="pay-opt-desc">
+                        Je paie le montant total directement en agence Jektis
+                        Travel.
+                      </div>
+                    </div>
+                    <div class="pay-opt-amount">
+                      583,790
+                      <span
+                        style="
+                          font-size: 0.75rem;
+                          font-weight: 400;
+                          color: var(--text-muted);
+                        "
+                        >TND</span
+                      >
+                    </div>
+                  </div>
+
+                  <!-- Agency split -->
+                  <div class="pay-opt" data-pay="agency-split">
+                    <div class="pay-radio"></div>
+                    <div class="pay-opt-body">
+                      <div class="pay-opt-title">
+                        <i
+                          class="fa-solid fa-hand-holding-dollar"
+                          style="color: var(--primary); margin-right: 6px"
+                        ></i
+                        >Acompte à l'agence + reste à l'hôtel
+                      </div>
+                      <div class="pay-opt-desc">
+                        Je paie un acompte de <strong>68,790 TND</strong> en
+                        agence et <strong>515,000 TND</strong> directement à
+                        l'hôtel.
+                      </div>
+                    </div>
+                    <div style="text-align: right">
+                      <div class="pay-opt-amount">
+                        68,790
+                        <span
+                          style="
+                            font-size: 0.75rem;
+                            font-weight: 400;
+                            color: var(--text-muted);
+                          "
+                          >TND</span
+                        >
+                      </div>
+                      <div style="font-size: 0.7rem; color: var(--text-muted)">
+                        acompte
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Agency selector -->
+                <div class="agency-select-wrap visible" id="agency-wrap">
+                  <label>Sélectionnez votre agence</label>
+                  <div class="agency-tabs">
+                    <div class="agency-tab active">Tunis</div>
+                    <div class="agency-tab">Bizerte</div>
+                    <div class="agency-tab">Gabès</div>
+                    <div class="agency-tab">Sfax</div>
+                    <div class="agency-tab">Sousse</div>
+                  </div>
+                </div>
+
+                <!-- Cancellation notice -->
+                <div class="cancel-notice">
+                  <i class="fa-solid fa-triangle-exclamation"></i>
+                  <p>
+                    <strong>Conditions d'annulation — Chambre Double :</strong
+                    ><br />
+                    583,79 TND à payer pour toute annulation faite après le
+                    <strong>30 mai 2026</strong>.
+                  </p>
+                </div>
+
+                <!-- Terms -->
+                <div class="terms-row">
+                  <input type="checkbox" id="terms-check" />
+                  <label for="terms-check">
+                    J'accepte les
+                    <a href="#">conditions spécifiques de cette réservation</a>
+                    et les <a href="#">conditions générales de vente</a> de
+                    Jektis Travel, et j'y adhère sans aucune réserve.
+                  </label>
+                </div>
+              </div>
+              <!-- /form-card-body -->
+
+              <div class="res-submit-wrap">
+                <button class="res-submit" id="res-submit-btn" type="button">
+                  <i class="fa-solid fa-lock"></i>
+                  Confirmer ma réservation — 583,790 TND
+                </button>
+                <p
+                  style="
+                    text-align: center;
+                    font-size: 0.72rem;
+                    color: var(--text-muted);
+                    margin-top: 10px;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-shield-halved"
+                    style="color: var(--primary)"
+                  ></i>
+                  Paiement 100% sécurisé · Données chiffrées SSL
+                </p>
+              </div>
+            </div>
+            <!-- /payment card -->
+          </form>
+        </div>
+        <!-- /left col -->
+
+        <!-- ══ RIGHT — SUMMARY ══════════════════════ -->
+        <aside class="res-sidebar">
+          <div class="res-summary-card" data-aos="fade-left">
+            <div class="sum-head">
+              <h3>Détails de votre réservation</h3>
+              <p>Récapitulatif complet</p>
+            </div>
+            <div class="sum-body">
+              <!-- Hotel -->
+              <div class="sum-hotel">
+                <img
+                  class="sum-hotel-img"
+                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&q=80"
+                  alt="Radisson Blu"
+                />
+                <div>
+                  <div class="sum-hotel-name">
+                    Radisson Blu Hotel &amp; Conference Center
+                  </div>
+                  <div class="sum-hotel-loc">
+                    <i class="fa-solid fa-location-dot"></i> Place des Droits de
+                    l'Homme, 1001 Tunis
+                  </div>
+                  <div class="sum-stars">★★★★★</div>
+                </div>
+              </div>
+
+              <div class="sum-divider"></div>
+
+              <!-- Dates & Room -->
+              <div class="sum-row">
+                <span class="lbl"
+                  ><i class="fa-regular fa-calendar-check"></i> Arrivée</span
+                >
+                <span class="val">31 Mai 2026</span>
+              </div>
+              <div class="sum-row">
+                <span class="lbl"
+                  ><i class="fa-regular fa-calendar-xmark"></i> Départ</span
+                >
+                <span class="val">01 Juin 2026</span>
+              </div>
+              <div class="sum-row">
+                <span class="lbl"
+                  ><i class="fa-regular fa-moon"></i> Durée</span
+                >
+                <span class="val">1 nuit</span>
+              </div>
+              <div class="sum-row">
+                <span class="lbl"><i class="fa-solid fa-bed"></i> Chambre</span>
+                <span
+                  class="val"
+                  style="text-align: right; max-width: 160px; line-height: 1.4"
+                  >Chambre Double<br /><small
+                    style="font-weight: 400; color: var(--text-muted)"
+                    >Logement + Petit Déjeuner</small
+                  ></span
+                >
+              </div>
+              <div class="sum-row">
+                <span class="lbl"
+                  ><i class="fa-solid fa-users"></i> Occupation</span
+                >
+                <span class="val">2 adultes</span>
+              </div>
+
+              <div class="sum-divider"></div>
+
+              <!-- Pricing -->
+              <div class="sum-line">
+                <span class="lbl">Hébergement</span>
+                <span class="val">576,800 TND</span>
+              </div>
+              <div class="sum-line">
+                <span class="lbl">Frais de dossier</span>
+                <span class="val">+ 6,990 TND</span>
+              </div>
+
+              <div class="sum-total">
+                <span class="lbl">Montant Total</span>
+                <span class="val">583,790 TND</span>
+              </div>
+
+              <a href="#" class="modify-link">
+                <i class="fa-regular fa-pen-to-square"></i> Modifier la
+                recherche
+              </a>
+            </div>
+          </div>
+
+          <!-- Trust badges -->
+          <div class="trust-badges" data-aos="fade-left" data-aos-delay="80">
+            <div class="trust-badge">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Paiement sécurisé SSL</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fa-solid fa-award"></i>
+              <span>Meilleur prix garanti</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fa-solid fa-headset"></i>
+              <span>Support 24/7</span>
+            </div>
+            <div class="trust-badge">
+              <i class="fa-solid fa-users"></i>
+              <span>+1M clients satisfaits</span>
+            </div>
+          </div>
+
+          <!-- Agent -->
+          <div
+            class="res-summary-card"
+            style="position: static"
+            data-aos="fade-left"
+            data-aos-delay="120"
+          >
+            <div
+              class="sum-head"
+              style="background: linear-gradient(135deg, #0d1f38, #122240)"
+            >
+              <h3>
+                <i class="fa-regular fa-headset" style="margin-right: 8px"></i
+                >Besoin d'aide ?
+              </h3>
+              <p>Notre équipe vous accompagne</p>
+            </div>
+            <div class="sum-body" style="padding: 16px 20px">
+              <a
+                href="https://wa.me/21670103103"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 12px 16px;
+                  border-radius: 12px;
+                  background: #e7faf0;
+                  color: #1a7a45;
+                  font-weight: 600;
+                  font-size: 0.84rem;
+                  margin-bottom: 8px;
+                  transition: all 0.25s;
+                "
+                onmouseover="
+                  this.style.background = '#25D366';
+                  this.style.color = '#fff';
+                "
+                onmouseout="
+                  this.style.background = '#e7faf0';
+                  this.style.color = '#1a7a45';
+                "
+              >
+                <i class="fa-brands fa-whatsapp fa-lg"></i> WhatsApp — 70 103
+                103
+              </a>
+              <a
+                href="tel:+21670103103"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 10px;
+                  padding: 12px 16px;
+                  border-radius: 12px;
+                  background: var(--primary-pale);
+                  color: var(--primary);
+                  font-weight: 600;
+                  font-size: 0.84rem;
+                  transition: all 0.25s;
+                "
+                onmouseover="
+                  this.style.background = '#0B64B8';
+                  this.style.color = '#fff';
+                "
+                onmouseout="
+                  this.style.background = 'var(--primary-pale)';
+                  this.style.color = 'var(--primary)';
+                "
+              >
+                <i class="fa-solid fa-phone"></i> Appeler l'agence
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+      <!-- /res-grid -->
+    </div>
+    <!-- /res-page -->
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/reservation.js"></script>
+  </body>
+</html>

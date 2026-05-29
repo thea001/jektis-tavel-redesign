@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jektis Travel — Votre Agence de Voyage en Tunisie</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <!-- AOS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+  </head>
+  <body>
+    <!-- ═══════════════════════════════════════════════
+     INTRO SPLASH
+════════════════════════════════════════════════ -->
+    <div id="intro-splash">
+      <!-- Background video: nature/Tunisia landscape -->
+      <video
+        id="intro-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        src="./images/337459_medium.mp4"
+        poster="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1920&q=80"
+      ></video>
+      <div class="splash-blur-overlay"></div>
+      <div class="splash-logo-wrap">
+        <!-- SVG Logo Mark -->
+        <img
+          class="splash-logo-mark"
+          src="./images/logo_jektis.png"
+          alt="Jektis Travel Logo"
+        />
+
+        <div class="splash-tagline">Découvrez la Tunisie &amp; le Monde</div>
+      </div>
+      <div class="splash-scroll-hint">
+        <div class="scroll-mouse"></div>
+        <span>Défiler pour explorer</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+     PLANE SCENE — sticky scroll container
+     #plane-scene   : tall scroll track (2800px), position:relative
+     #plane-stage   : sticky viewport-height panel, position:sticky top:0
+     All animation elements live inside #plane-stage and use
+     position:absolute relative to the pinned viewport panel.
+════════════════════════════════════════════════ -->
+    <div id="plane-scene">
+      <div id="plane-stage">
+        <div id="runway-line"></div>
+        <div id="runway-glow"></div>
+        <div id="plane-shadow"></div>
+        <img id="plane-img" src="./images/plane.png" alt="avion" />
+        <div id="plane-text-left">Fly with</div>
+        <div id="plane-text-right">JektisTravel</div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════ -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
+          <svg width="36" height="36" viewBox="0 0 90 90" fill="none">
+            <circle
+              cx="45"
+              cy="45"
+              r="44"
+              stroke="#BBCC1C"
+              stroke-width="2"
+              opacity="0.7"
+            />
+            <path
+              d="M45 15 C30 15 20 25 18 38 L45 42 L72 38 C70 25 60 15 45 15Z"
+              fill="#0B64B8"
+            />
+            <path d="M18 38 C16 52 22 65 34 72 L45 42Z" fill="#3C8BD8" />
+            <path
+              d="M72 38 C74 52 68 65 56 72 L45 42Z"
+              fill="#3C8BD8"
+              opacity="0.8"
+            />
+            <path
+              d="M34 72 C38 76 45 78 45 78 C45 78 52 76 56 72 L45 42Z"
+              fill="#BBCC1C"
+            />
+            <circle cx="45" cy="42" r="5" fill="#fff" />
+          </svg>
+          <span class="nav-logo-text">Jektis<span>Travel</span></span>
+        </a>
+
+        <!-- Menu -->
+        <ul class="nav-menu">
+          <!-- Séjours en Tunisie dropdown -->
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-regular fa-map"></i> Séjours en Tunisie
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropdown">
+              <a href="#"
+                ><i class="fa-regular fa-building mr-1"></i> Hôtels Tunis</a
+              >
+              <a href="#"><i class="fa-regular fa-sun mr-1"></i> Hammamet</a>
+              <a href="#"><i class="fa-regular fa-compass mr-1"></i> Korba</a>
+              <a href="#"><i class="fa-regular fa-map-dot mr-1"></i> Nabeul</a>
+              <a href="#">Korbous</a>
+              <a href="#">Sousse</a>
+              <a href="#">Monastir</a>
+              <a href="#">Mahdia</a>
+              <a href="#">Tabarka</a>
+              <a href="#">Ain Draham</a>
+              <a href="#">Tozeur</a>
+              <a href="#">Djerba</a>
+              <a href="#">Kairouan</a>
+              <a href="#">Sfax</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-globe"></i> Destinations</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-plane"></i> Vols</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-id-card"></i> Visa</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-briefcase"></i> Espace Entreprise</a
+            >
+          </li>
+        </ul>
+
+        <!-- Actions -->
+        <div class="nav-actions">
+          <button class="nav-login btn">
+            <i class="fa-regular fa-user"></i> Connexion
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════
+     HERO CAROUSEL
+════════════════════════════════════════════════ -->
+    <section id="hero">
+      <div
+        class="hero-slide active"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=1920&q=80&quot;);
+        "
+      ></div>
+      <div
+        class="hero-slide"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80&quot;);
+        "
+      ></div>
+      <div
+        class="hero-slide"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1920&q=80&quot;);
+        "
+      ></div>
+      <div
+        class="hero-slide"
+        style="
+          background-image: url(&quot;https://images.unsplash.com/photo-1548013146-72479768bada?w=1920&q=80&quot;);
+        "
+      ></div>
+
+      <div class="hero-content">
+        <div
+          class="tag tag-accent mb-4"
+          style="display: inline-flex; margin: 0 auto 16px"
+        >
+          <i class="fa-solid fa-star"></i> Meilleures offres 2024
+        </div>
+        <h1 id="hero-title">
+          Découvrez la Magie<br />de la
+          <span style="color: #bbcc1c">Tunisie</span>
+        </h1>
+        <p id="hero-sub">
+          Des séjours inoubliables, des hôtels 5 étoiles, des circuits
+          authentiques — tout commence ici.
+        </p>
+        <div
+          style="
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+          "
+        >
+          <a href="#search-box" class="btn btn-accent"
+            ><i class="fa-solid fa-magnifying-glass"></i> Explorer les offres</a
+          >
+          <a href="#destinations" class="btn btn-ghost"
+            ><i class="fa-regular fa-compass"></i> Voir les destinations</a
+          >
+        </div>
+      </div>
+
+      <div class="hero-dots" id="hero-dots">
+        <button class="hero-dot active" data-idx="0"></button>
+        <button class="hero-dot" data-idx="1"></button>
+        <button class="hero-dot" data-idx="2"></button>
+        <button class="hero-dot" data-idx="3"></button>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     SEARCH BOX
+════════════════════════════════════════════════ -->
+    <div id="search-box">
+      <div class="search-wrap">
+        <div class="search-title">
+          Trouvez votre prochaine <span>aventure</span>
+        </div>
+        <div class="search-tabs" role="tablist">
+          <button class="stab active" data-tab="hotels">
+            <i class="fa-regular fa-building"></i> Hôtels
+          </button>
+          <button class="stab" data-tab="vols">
+            <i class="fa-regular fa-plane"></i> Vols
+          </button>
+          <button class="stab" data-tab="circuits">
+            <i class="fa-regular fa-route"></i> Circuits organisés
+          </button>
+          <button class="stab" data-tab="visa">
+            <i class="fa-regular fa-id-card"></i> Visa
+          </button>
+          <button class="stab" data-tab="sejour">
+            <i class="fa-regular fa-umbrella-beach"></i> Séjour tout inclus
+          </button>
+        </div>
+
+        <!-- Hôtels -->
+        <div class="search-form-panel active" id="tab-hotels">
+          <div class="search-grid g3">
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-location-dot"></i> Destination</label
+              >
+              <input type="text" placeholder="Où souhaitez-vous aller ?" />
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-calendar"></i> Arrivée</label>
+              <input type="date" />
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-calendar-check"></i> Départ</label>
+              <input type="date" />
+            </div>
+          </div>
+          <div class="search-grid g2 mt-3">
+            <div class="sfield">
+              <label><i class="fa-regular fa-users"></i> Voyageurs</label>
+              <select>
+                <option>2 adultes</option>
+                <option>1 adulte</option>
+                <option>3 adultes</option>
+                <option>Famille</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-star"></i> Catégorie</label>
+              <select>
+                <option>Toutes catégories</option>
+                <option>★★★ 3 étoiles</option>
+                <option>★★★★ 4 étoiles</option>
+                <option>★★★★★ 5 étoiles</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-cta">
+            <button class="btn btn-accent">
+              <i class="fa-solid fa-magnifying-glass"></i> Rechercher
+            </button>
+          </div>
+        </div>
+
+        <!-- Vols -->
+        <div class="search-form-panel" id="tab-vols">
+          <div class="search-grid g2">
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-plane-departure"></i> Départ</label
+              >
+              <input type="text" placeholder="Ville de départ" />
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-plane-arrival"></i> Arrivée</label>
+              <input type="text" placeholder="Ville d'arrivée" />
+            </div>
+          </div>
+          <div class="search-grid g3 mt-3">
+            <div class="sfield">
+              <label><i class="fa-regular fa-calendar"></i> Date aller</label>
+              <input type="date" />
+            </div>
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-calendar-check"></i> Date retour</label
+              >
+              <input type="date" />
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-users"></i> Passagers</label>
+              <select>
+                <option>1 passager</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4+</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-cta">
+            <button class="btn btn-accent">
+              <i class="fa-solid fa-magnifying-glass"></i> Rechercher les vols
+            </button>
+          </div>
+        </div>
+
+        <!-- Circuits -->
+        <div class="search-form-panel" id="tab-circuits">
+          <div class="search-grid g2">
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-map-location-dot"></i> Destination du
+                circuit</label
+              >
+              <select>
+                <option>Toute la Tunisie</option>
+                <option>Circuit Sud Tunisie</option>
+                <option>Circuit Djerba</option>
+                <option>Circuit Sahara</option>
+                <option>Circuit Culturel</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-calendar"></i> Date de départ</label
+              >
+              <input type="date" />
+            </div>
+          </div>
+          <div class="search-grid g2 mt-3">
+            <div class="sfield">
+              <label><i class="fa-regular fa-hourglass"></i> Durée</label>
+              <select>
+                <option>Toutes durées</option>
+                <option>3-4 jours</option>
+                <option>5-7 jours</option>
+                <option>8-10 jours</option>
+                <option>+10 jours</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-users"></i> Participants</label>
+              <select>
+                <option>2 personnes</option>
+                <option>1 personne</option>
+                <option>3-5</option>
+                <option>Groupe</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-cta">
+            <button class="btn btn-accent">
+              <i class="fa-solid fa-magnifying-glass"></i> Trouver un circuit
+            </button>
+          </div>
+        </div>
+
+        <!-- Visa -->
+        <div class="search-form-panel" id="tab-visa">
+          <div class="search-grid g3">
+            <div class="sfield">
+              <label><i class="fa-regular fa-flag"></i> Nationalité</label>
+              <select>
+                <option>Tunisienne</option>
+                <option>Française</option>
+                <option>Algérienne</option>
+                <option>Marocaine</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-earth-africa"></i> Destination</label
+              >
+              <input type="text" placeholder="Pays de destination" />
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-id-card"></i> Type de visa</label>
+              <select>
+                <option>Tourisme</option>
+                <option>Affaires</option>
+                <option>Étudiant</option>
+                <option>Transit</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-cta">
+            <button class="btn btn-accent">
+              <i class="fa-solid fa-magnifying-glass"></i> Vérifier les
+              conditions
+            </button>
+          </div>
+        </div>
+
+        <!-- Séjour -->
+        <div class="search-form-panel" id="tab-sejour">
+          <div class="search-grid g2">
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-location-dot"></i> Destination</label
+              >
+              <select>
+                <option>Choisir la destination</option>
+                <option>Hammamet</option>
+                <option>Djerba</option>
+                <option>Sousse</option>
+                <option>Monastir</option>
+                <option>Tabarka</option>
+                <option>Europe</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label
+                ><i class="fa-regular fa-calendar"></i> Date de séjour</label
+              >
+              <input type="date" />
+            </div>
+          </div>
+          <div class="search-grid g3 mt-3">
+            <div class="sfield">
+              <label><i class="fa-regular fa-hourglass"></i> Durée</label>
+              <select>
+                <option>1 semaine</option>
+                <option>2 semaines</option>
+                <option>Long séjour</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-users"></i> Voyageurs</label>
+              <select>
+                <option>2 adultes</option>
+                <option>Solo</option>
+                <option>Couple</option>
+                <option>Famille</option>
+              </select>
+            </div>
+            <div class="sfield">
+              <label><i class="fa-regular fa-star"></i> Budget</label>
+              <select>
+                <option>Tous budgets</option>
+                <option>Économique</option>
+                <option>Confort</option>
+                <option>Luxe</option>
+              </select>
+            </div>
+          </div>
+          <div class="search-cta">
+            <button class="btn btn-accent">
+              <i class="fa-solid fa-magnifying-glass"></i> Trouver un séjour
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+     DESTINATIONS GALLERY
+════════════════════════════════════════════════ -->
+    <section id="destinations">
+      <div class="container">
+        <div data-aos="fade-up">
+          <div class="ornament">
+            <span></span>
+            <i class="fa-solid fa-compass"></i>
+            <span></span>
+          </div>
+          <h2 class="section-title">
+            Destinations <span class="accent-text">Tendance</span>
+          </h2>
+          <p class="section-subtitle">
+            Explorez les joyaux de la Tunisie et au-delà — des plages de sable
+            blanc aux médinas historiques.
+          </p>
+        </div>
+
+        <div class="dest-grid" data-aos="fade-up" data-aos-delay="100">
+          <div class="dest-card">
+            <img
+              src="https://images.unsplash.com/photo-1539650116574-8efeb43e2750?w=900&q=80"
+              alt="Sidi Bou Said"
+            />
+            <div class="dest-overlay">
+              <span class="dest-name">Sidi Bou Said</span>
+              <span class="dest-sub">Le village bleu &amp; blanc</span>
+            </div>
+            <div class="dest-hover-pill">Voir les offres</div>
+          </div>
+          <div class="dest-card">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80"
+              alt="Hammamet"
+            />
+            <div class="dest-overlay">
+              <span class="dest-name">Hammamet</span>
+              <span class="dest-sub">Plages &amp; Resorts 5★</span>
+            </div>
+            <div class="dest-hover-pill">Voir les offres</div>
+          </div>
+          <div class="dest-card">
+            <img
+              src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80"
+              alt="Djerba"
+            />
+            <div class="dest-overlay">
+              <span class="dest-name">Djerba</span>
+              <span class="dest-sub">L'île des rêves</span>
+            </div>
+            <div class="dest-hover-pill">Voir les offres</div>
+          </div>
+          <div class="dest-card">
+            <img
+              src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=900&q=80"
+              alt="Tozeur Sahara"
+            />
+            <div class="dest-overlay">
+              <span class="dest-name">Tozeur &amp; Sahara</span>
+              <span class="dest-sub">Dunes d'or &amp; oasis</span>
+            </div>
+            <div class="dest-hover-pill">Voir les offres</div>
+          </div>
+          <div class="dest-card">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&q=80"
+              alt="Sousse"
+            />
+            <div class="dest-overlay">
+              <span class="dest-name">Sousse</span>
+              <span class="dest-sub">La Perle du Sahel</span>
+            </div>
+            <div class="dest-hover-pill">Voir les offres</div>
+          </div>
+          <div class="dest-card">
+            <img
+              src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=600&q=80"
+              alt="Tabarka"
+            />
+            <div class="dest-overlay">
+              <span class="dest-name">Tabarka</span>
+              <span class="dest-sub">Forêts &amp; Mer</span>
+            </div>
+            <div class="dest-hover-pill">Voir les offres</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     FEATURED OFFERS
+════════════════════════════════════════════════ -->
+    <section id="offers">
+      <div class="container">
+        <div
+          data-aos="fade-up"
+          class="flex items-center justify-between flex-wrap gap-4"
+        >
+          <div>
+            <div class="ornament">
+              <span></span><i class="fa-solid fa-tag"></i><span></span>
+            </div>
+            <h2 class="section-title">
+              Offres <span class="accent-text">Voyage</span> du Moment
+            </h2>
+            <p class="section-subtitle">
+              Promotions exclusives sélectionnées par nos experts.
+            </p>
+          </div>
+          <a href="#" class="btn btn-ghost"
+            >Voir toutes les offres <i class="fa-solid fa-arrow-right"></i
+          ></a>
+        </div>
+
+        <div class="offers-grid">
+          <!-- Card 1 -->
+          <div class="offer-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="offer-img">
+              <img
+                src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=700&q=80"
+                alt="Djerba"
+              />
+              <div class="offer-badge">Vente Flash</div>
+            </div>
+            <div class="offer-body">
+              <div class="flex gap-2 mb-3">
+                <span class="tag tag-accent">Tout inclus</span
+                ><span class="tag tag-primary">7 nuits</span>
+              </div>
+              <div class="offer-title">Djerba — Club Méditerranée 5★</div>
+              <div class="offer-meta">
+                <span><i class="fa-regular fa-calendar"></i> Déc 2024</span>
+                <span><i class="fa-regular fa-users"></i> 2 adultes</span>
+                <span><i class="fa-regular fa-plane"></i> Vols inclus</span>
+              </div>
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: var(--text-muted);
+                  line-height: 1.6;
+                "
+              >
+                Séjour paradisiaque sur les plages cristallines de Djerba,
+                animation &amp; spa inclus.
+              </p>
+              <div class="offer-price">
+                <span class="from">À partir de</span>
+                <span class="amount">1 290 DT</span>
+                <span class="per">/ pers.</span>
+              </div>
+              <button
+                class="btn btn-primary mt-3 w-full justify-center"
+                style="width: 100%"
+              >
+                Réserver maintenant
+              </button>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="offer-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="offer-img">
+              <img
+                src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80"
+                alt="Circuit Sud"
+              />
+              <div class="offer-badge">Coup de cœur</div>
+            </div>
+            <div class="offer-body">
+              <div class="flex gap-2 mb-3">
+                <span class="tag tag-accent">Circuit</span
+                ><span class="tag tag-primary">5 jours</span>
+              </div>
+              <div class="offer-title">Circuit Sud — Sahara &amp; Oasis</div>
+              <div class="offer-meta">
+                <span
+                  ><i class="fa-regular fa-calendar"></i> Toute l'année</span
+                >
+                <span><i class="fa-regular fa-users"></i> Min. 4</span>
+                <span><i class="fa-regular fa-bus"></i> Transport inclus</span>
+              </div>
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: var(--text-muted);
+                  line-height: 1.6;
+                "
+              >
+                Tozeur, Douz, Matmata — vivez l'aventure des dunes et des ksour
+                berbères.
+              </p>
+              <div class="offer-price">
+                <span class="from">À partir de</span>
+                <span class="amount">490 DT</span>
+                <span class="per">/ pers.</span>
+              </div>
+              <button class="btn btn-primary mt-3" style="width: 100%">
+                Réserver maintenant
+              </button>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="offer-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-img">
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=700&q=80"
+                alt="Paris Tunis"
+              />
+              <div class="offer-badge">Early Booking</div>
+            </div>
+            <div class="offer-body">
+              <div class="flex gap-2 mb-3">
+                <span class="tag tag-accent">Vol A/R</span
+                ><span class="tag tag-primary">Direct</span>
+              </div>
+              <div class="offer-title">Tunis–Paris — Vol Aller-Retour</div>
+              <div class="offer-meta">
+                <span><i class="fa-regular fa-calendar"></i> Jan–Mar 2025</span>
+                <span><i class="fa-regular fa-clock"></i> 2h45</span>
+                <span><i class="fa-regular fa-plane"></i> Tunisair</span>
+              </div>
+              <p
+                style="
+                  font-size: 0.82rem;
+                  color: var(--text-muted);
+                  line-height: 1.6;
+                "
+              >
+                Meilleurs tarifs garantis pour Paris. Vols directs au départ de
+                Tunis Carthage.
+              </p>
+              <div class="offer-price">
+                <span class="from">À partir de</span>
+                <span class="amount">780 DT</span>
+                <span class="per">/ pers.</span>
+              </div>
+              <button class="btn btn-primary mt-3" style="width: 100%">
+                Réserver maintenant
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     WHY CHOOSE US
+════════════════════════════════════════════════ -->
+    <section id="why">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <div class="ornament" style="justify-content: center">
+            <span></span><i class="fa-solid fa-shield-halved"></i><span></span>
+          </div>
+          <h2 class="section-title">
+            Pourquoi choisir <span class="accent-text">Jektis Travel</span> ?
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto">
+            Plus de 15 ans d'expertise pour vous offrir les meilleures
+            expériences de voyage.
+          </p>
+        </div>
+        <div class="why-grid">
+          <div class="why-card" data-aos="fade-up" data-aos-delay="0">
+            <div class="why-icon"><i class="fa-solid fa-shield-check"></i></div>
+            <div class="why-title">Paiement Sécurisé</div>
+            <p class="why-desc">
+              Transactions 100% sécurisées par protocoles bancaires certifiés.
+              Payez en toute confiance.
+            </p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="80">
+            <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+            <div class="why-title">Support 24/7</div>
+            <p class="why-desc">
+              Notre équipe est disponible à toute heure pour répondre à vos
+              questions et urgences.
+            </p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="160">
+            <div class="why-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="why-title">Meilleurs Prix</div>
+            <p class="why-desc">
+              Garantie du meilleur tarif sur tous nos hôtels, circuits et
+              packages voyage.
+            </p>
+          </div>
+          <div class="why-card" data-aos="fade-up" data-aos-delay="240">
+            <div class="why-icon"><i class="fa-solid fa-earth-africa"></i></div>
+            <div class="why-title">Destinations Mondiales</div>
+            <p class="why-desc">
+              Tunisie, Europe, Asie, Amériques — des centaines de destinations à
+              portée de clic.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     CUSTOM SOLUTIONS
+════════════════════════════════════════════════ -->
+    <section id="solutions">
+      <div class="container">
+        <div class="solutions-grid">
+          <div class="solutions-visual" data-aos="fade-right">
+            <img
+              src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=900&q=80"
+              alt="Voyage sur mesure"
+            />
+            <div class="solutions-stat">
+              <div class="stat-num">+50K</div>
+              <div class="stat-label">Clients satisfaits</div>
+            </div>
+            <div class="solutions-stat">
+              <div class="stat-num">15+</div>
+              <div class="stat-label">Années d'expérience</div>
+            </div>
+          </div>
+          <div data-aos="fade-left">
+            <div class="ornament">
+              <span></span><i class="fa-solid fa-wand-magic-sparkles"></i
+              ><span></span>
+            </div>
+            <h2 class="section-title">
+              Solutions Voyage <span class="accent-text">Sur Mesure</span>
+            </h2>
+            <p
+              style="
+                color: var(--text-muted);
+                font-size: 0.95rem;
+                margin: 16px 0 28px;
+                line-height: 1.8;
+              "
+            >
+              Que vous planifiez un voyage d'affaires, un voyage de noce ou des
+              vacances en famille — nos experts créent l'expérience parfaite,
+              adaptée à vos envies et votre budget.
+            </p>
+            <div class="solutions-list">
+              <div class="sol-item">
+                <i class="fa-solid fa-briefcase sol-icon"></i>
+                <div class="sol-text">
+                  <h4>Voyages d'Affaires &amp; Entreprises</h4>
+                  <p>
+                    Séminaires, incentives, déplacements professionnels — tout
+                    géré clé en main.
+                  </p>
+                </div>
+              </div>
+              <div class="sol-item">
+                <i class="fa-solid fa-heart sol-icon"></i>
+                <div class="sol-text">
+                  <h4>Lune de Miel &amp; Occasions Spéciales</h4>
+                  <p>
+                    Voyages romantiques personnalisés dans les plus belles
+                    destinations du monde.
+                  </p>
+                </div>
+              </div>
+              <div class="sol-item">
+                <i class="fa-solid fa-users sol-icon"></i>
+                <div class="sol-text">
+                  <h4>Voyages de Groupe</h4>
+                  <p>
+                    Tarifs négociés, logistique simplifiée pour groupes de 10 à
+                    200 personnes.
+                  </p>
+                </div>
+              </div>
+              <div class="sol-item">
+                <i class="fa-solid fa-gift sol-icon"></i>
+                <div class="sol-text">
+                  <h4>Coffrets Cadeaux Voyage</h4>
+                  <p>
+                    Offrez une expérience inoubliable — week-ends, escapades ou
+                    séjours étoilés.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="btn btn-accent mt-4" style="margin-top: 24px"
+              ><i class="fa-solid fa-arrow-right"></i> Demander un devis</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     REVIEWS
+════════════════════════════════════════════════ -->
+    <section id="reviews">
+      <div class="container">
+        <div class="text-center" data-aos="fade-up">
+          <div class="ornament" style="justify-content: center">
+            <span></span><i class="fa-solid fa-star"></i><span></span>
+          </div>
+          <h2 class="section-title">
+            Ce que disent <span class="accent-text">nos clients</span>
+          </h2>
+          <p class="section-subtitle" style="margin: 0 auto">
+            Des milliers de voyageurs nous font confiance chaque année.
+          </p>
+        </div>
+      </div>
+      <div
+        class="reviews-track-wrap mt-12"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        <div class="reviews-track" id="reviews-track">
+          <!-- Reviews are injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     NEWSLETTER
+════════════════════════════════════════════════ -->
+    <section id="newsletter">
+      <div class="container">
+        <div class="newsletter-wrap" data-aos="zoom-in">
+          <div class="ornament" style="justify-content: center">
+            <span></span><i class="fa-regular fa-envelope"></i><span></span>
+          </div>
+          <h2 class="section-title" style="font-size: 1.8rem">
+            Offres exclusives <span class="accent-text">par email</span>
+          </h2>
+          <p>
+            Recevez en avant-première nos meilleures promotions, ventes flash et
+            bons plans voyage.
+          </p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Votre adresse email" />
+            <button class="btn btn-accent">
+              <i class="fa-solid fa-paper-plane"></i> S'abonner
+            </button>
+          </form>
+          <p
+            style="
+              font-size: 0.72rem;
+              color: rgba(255, 255, 255, 0.3);
+              margin-top: 12px;
+            "
+          >
+            En vous abonnant, vous acceptez de recevoir des communications
+            marketing. Désabonnement possible à tout moment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+    <footer>
+      <div class="container">
+        <!-- Main Footer -->
+        <div class="footer-top">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <div class="nav-logo" style="margin-bottom: 12px">
+              <svg width="32" height="32" viewBox="0 0 90 90" fill="none">
+                <circle
+                  cx="45"
+                  cy="45"
+                  r="44"
+                  stroke="#BBCC1C"
+                  stroke-width="2"
+                  opacity="0.7"
+                />
+                <path
+                  d="M45 15 C30 15 20 25 18 38 L45 42 L72 38 C70 25 60 15 45 15Z"
+                  fill="#0B64B8"
+                />
+                <path d="M18 38 C16 52 22 65 34 72 L45 42Z" fill="#3C8BD8" />
+                <path
+                  d="M72 38 C74 52 68 65 56 72 L45 42Z"
+                  fill="#3C8BD8"
+                  opacity="0.8"
+                />
+                <path
+                  d="M34 72 C38 76 45 78 45 78 C45 78 52 76 56 72 L45 42Z"
+                  fill="#BBCC1C"
+                />
+                <circle cx="45" cy="42" r="5" fill="#fff" />
+              </svg>
+              <span class="nav-logo-text" style="font-size: 1.25rem"
+                >Jektis<span>Travel</span></span
+              >
+            </div>
+            <p>
+              Votre Agence de Voyage en Tunisie en Ligne. Promotions sur vos
+              Voyages et Séjours en Tunisie et dans le Monde avec les Meilleurs
+              Prix et Services.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-btn" aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="TikTok"
+                ><i class="fa-brands fa-tiktok"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="LinkedIn"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-btn" aria-label="YouTube"
+                ><i class="fa-brands fa-youtube"></i
+              ></a>
+            </div>
+            <div class="payment-icons">
+              <span
+                ><i
+                  class="fa-solid fa-lock mr-1"
+                  style="color: #bbcc1c; font-size: 0.65rem"
+                ></i>
+                Visa</span
+              >
+              <span>Mastercard</span>
+              <span>Virement</span>
+              <span
+                ><i
+                  class="fa-solid fa-shield-halved mr-1"
+                  style="color: #bbcc1c; font-size: 0.65rem"
+                ></i>
+                Sécurisé</span
+              >
+            </div>
+          </div>
+
+          <!-- Nos produits -->
+          <div class="footer-col">
+            <h4>Nos Produits</h4>
+            <ul>
+              <li><a href="#">Hôtels Tunisie</a></li>
+              <li><a href="#">Circuit Tunisie</a></li>
+              <li><a href="#">Tunis–Paris</a></li>
+              <li><a href="#">Coffret Cadeau</a></li>
+              <li><a href="#">Réveillon Tunisie</a></li>
+              <li><a href="#">Saint Valentin</a></li>
+              <li><a href="#">Vente Flash</a></li>
+              <li><a href="#">Parc Carthage Land</a></li>
+            </ul>
+          </div>
+
+          <!-- Nos hôtels -->
+          <div class="footer-col">
+            <h4>Nos Hôtels</h4>
+            <ul>
+              <li><a href="#">Hôtels Tunis</a></li>
+              <li><a href="#">Hôtels Tabarka</a></li>
+              <li><a href="#">Hôtels Hammamet</a></li>
+              <li><a href="#">Hôtels Sousse</a></li>
+              <li><a href="#">Hôtels Monastir</a></li>
+              <li><a href="#">Hôtels Mahdia</a></li>
+              <li><a href="#">Hôtels Djerba</a></li>
+              <li><a href="#">Hôtels Tozeur</a></li>
+              <li><a href="#">Hôtels Recommandés</a></li>
+            </ul>
+          </div>
+
+          <!-- Nos promos -->
+          <div class="footer-col">
+            <h4>Nos Promos</h4>
+            <ul>
+              <li><a href="#">Promo du Mois</a></li>
+              <li><a href="#">Last Minute</a></li>
+              <li><a href="#">Promos Ramadan</a></li>
+              <li><a href="#">Promos Aid</a></li>
+              <li><a href="#">Early Booking</a></li>
+              <li><a href="#">Gratuités Enfants</a></li>
+              <li><a href="#">Circuits Sud Tunisie</a></li>
+              <li><a href="#">Circuits Djerba</a></li>
+            </ul>
+          </div>
+
+          <!-- Vacances par thème -->
+          <div class="footer-col">
+            <h4>Par Thème</h4>
+            <ul>
+              <li><a href="#">Luxe &amp; Prestige</a></li>
+              <li><a href="#">Petit Budget</a></li>
+              <li><a href="#">Voyages de Noce</a></li>
+              <li><a href="#">Séjours d'Exception</a></li>
+              <li><a href="#">Voyages Sans Visa</a></li>
+              <li><a href="#">Top Vente</a></li>
+              <li><a href="#">TRE</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Extra info footer -->
+        <div class="footer-extra">
+          <div class="footer-extra-col">
+            <h5>Informations Utiles</h5>
+            <ul>
+              <li><a href="#">Qui sommes-nous ?</a></li>
+              <li><a href="#">Conditions de vente</a></li>
+              <li><a href="#">Jektis vous répond</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Points de ventes</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </div>
+          <div class="footer-extra-col" style="grid-column: span 2">
+            <h5>Contact</h5>
+            <div class="footer-address">
+              <strong>Adresse</strong>
+              Angle rue des Entrepreneurs et rue du Métal<br />
+              Immeuble SOFIDE, 3ème étage<br />
+              Z.I Charguia II — 2035 Tunis Carthage<br /><br />
+              <strong>Téléphone</strong>
+              Tél : +(216) 70 103 103<br />
+              Fax : +(216) 71 942 682
+            </div>
+          </div>
+          <div
+            class="footer-extra-col"
+            style="
+              grid-column: span 2;
+              display: flex;
+              align-items: flex-end;
+              justify-content: flex-end;
+            "
+          >
+            <div>
+              <svg
+                width="60"
+                height="60"
+                viewBox="0 0 90 90"
+                fill="none"
+                style="opacity: 0.15"
+              >
+                <circle
+                  cx="45"
+                  cy="45"
+                  r="44"
+                  stroke="#BBCC1C"
+                  stroke-width="2"
+                />
+                <path
+                  d="M45 15 C30 15 20 25 18 38 L45 42 L72 38 C70 25 60 15 45 15Z"
+                  fill="#0B64B8"
+                />
+                <path d="M18 38 C16 52 22 65 34 72 L45 42Z" fill="#3C8BD8" />
+                <path d="M72 38 C74 52 68 65 56 72 L45 42Z" fill="#3C8BD8" />
+                <path
+                  d="M34 72 C38 76 45 78 45 78 C45 78 52 76 56 72 L45 42Z"
+                  fill="#BBCC1C"
+                />
+                <circle cx="45" cy="42" r="5" fill="#fff" />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="footer-bottom">
+          <p class="footer-copy">©2024 JektisTravel — Tous droits réservés.</p>
+          <div class="footer-legal">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">CGV</a>
+            <a href="#">Plan du site</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════════════ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="./js/global_script.js"></script>
+    <script src="./js/home_script.js"></script>
+  </body>
+</html>
