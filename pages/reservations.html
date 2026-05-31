@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mes Réservations — Jektis Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Mono:wght@400;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/reservations.css" />
+  </head>
+  <body>
+    <!-- ─── NOISE OVERLAY ─── -->
+    <div class="noise"></div>
+
+    <!-- ─── PAGE ─── -->
+    <div class="page">
+      <!-- HEADER -->
+      <header class="res-header">
+        <div class="res-header-left">
+          <div class="res-logo">
+            <div>
+              <span class="res-logo-name">Jektis<em>Travel</em></span>
+              <span class="res-logo-sub">Espace Voyageur</span>
+            </div>
+          </div>
+        </div>
+        <div class="res-header-right">
+          <div class="res-user">
+            <div class="res-user-avatar">AK</div>
+            <div class="res-user-info">
+              <span class="res-user-name">Ahmed Karray</span>
+              <span class="res-user-tier"
+                ><i class="fa-solid fa-crown"></i> Gold Member</span
+              >
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- HERO STATS BAR -->
+      <section class="res-stats-bar">
+        <div class="res-stat">
+          <span class="res-stat-val">7</span>
+          <span class="res-stat-key">Réservations</span>
+        </div>
+        <div class="res-stat-sep"></div>
+        <div class="res-stat">
+          <span class="res-stat-val">3</span>
+          <span class="res-stat-key">À venir</span>
+        </div>
+        <div class="res-stat-sep"></div>
+        <div class="res-stat">
+          <span class="res-stat-val">14 280</span>
+          <span class="res-stat-key">Miles accumulés</span>
+        </div>
+        <div class="res-stat-sep"></div>
+        <div class="res-stat">
+          <span class="res-stat-val">12</span>
+          <span class="res-stat-key">Pays visités</span>
+        </div>
+      </section>
+
+      <!-- TITLE + FILTERS -->
+      <section class="res-controls">
+        <div class="res-title-wrap">
+          <div class="res-ornament">
+            <span></span><i class="fa-solid fa-ticket"></i><span></span>
+          </div>
+          <h1 class="res-title">Mes <em>Billets</em> &amp; Réservations</h1>
+        </div>
+        <div class="res-filters">
+          <button class="res-filter active" data-filter="all">Tous</button>
+          <button class="res-filter" data-filter="upcoming">À venir</button>
+          <button class="res-filter" data-filter="checkin">
+            Check-in ouvert
+          </button>
+          <button class="res-filter" data-filter="completed">Terminés</button>
+          <button class="res-filter" data-filter="cancelled">Annulés</button>
+        </div>
+      </section>
+
+      <!-- TICKETS GRID -->
+      <section class="res-grid" id="res-grid">
+        <!-- ══ TICKET 1 — Upcoming long-haul ══ -->
+        <article class="ticket upcoming" data-depart="2025-08-15T06:30:00">
+          <div class="ticket-shimmer"></div>
+          <!-- LEFT stub -->
+          <div class="ticket-stub">
+            <div class="stub-airline">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Qatar_Airways_Logo.png"
+                alt="Qatar Airways"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">QR 701</div>
+            <div class="stub-class">Business</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">3A</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="QR701-TUN-DOH-3A-250815"
+              ></canvas>
+            </div>
+          </div>
+
+          <!-- Perforation -->
+          <div class="ticket-perf">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+
+          <!-- MAIN body -->
+          <div class="ticket-body">
+            <div class="ticket-top-row">
+              <div class="ticket-status upcoming-badge">
+                <i class="fa-solid fa-clock"></i> À venir
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0087231</strong></div>
+            </div>
+
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">TUN</span>
+                <span class="city-name">Tunis</span>
+                <span class="city-time">06:30</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">6h 45m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">DOH</span>
+                <span class="city-name">Doha</span>
+                <span class="city-time">12:15</span>
+              </div>
+            </div>
+
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i>
+                <span>15 Août 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i>
+                <span>Porte B22</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i>
+                <span>30 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i>
+                <span>2 passagers</span>
+              </div>
+            </div>
+
+            <div class="ticket-footer">
+              <div class="ticket-timer" data-depart="2025-08-15T06:30:00">
+                <span class="timer-label">Départ dans</span>
+                <div class="timer-blocks">
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="d">--</span
+                    ><span class="t-unit">j</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="h">--</span
+                    ><span class="t-unit">h</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="m">--</span
+                    ><span class="t-unit">m</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="s">--</span
+                    ><span class="t-unit">s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Billet
+                </button>
+                <button class="t-btn t-btn-primary">
+                  <i class="fa-solid fa-check-circle"></i> Check-in
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ TICKET 2 — Check-in open ══ -->
+        <article class="ticket checkin" data-depart="2025-07-04T14:20:00">
+          <div class="ticket-shimmer"></div>
+          <div class="ticket-stub">
+            <div class="stub-airline">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Turkish_Airlines_logo_%282010-2017%29.svg/1280px-Turkish_Airlines_logo_%282010-2017%29.svg.png"
+                alt="Turkish Airlines"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">TK 733</div>
+            <div class="stub-class">Économique</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">22F</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="TK733-TUN-IST-22F-250704"
+              ></canvas>
+            </div>
+          </div>
+          <div class="ticket-perf">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-top-row">
+              <div class="ticket-status checkin-badge">
+                <i class="fa-solid fa-bell"></i> Check-in ouvert
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0091445</strong></div>
+            </div>
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">TUN</span>
+                <span class="city-name">Tunis</span>
+                <span class="city-time">14:20</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">2h 55m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">IST</span>
+                <span class="city-name">Istanbul</span>
+                <span class="city-time">17:15</span>
+              </div>
+            </div>
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i><span>4 Juil 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i><span>Porte A14</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i><span>23 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i><span>1 passager</span>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <div class="ticket-timer" data-depart="2025-07-04T14:20:00">
+                <span class="timer-label">Départ dans</span>
+                <div class="timer-blocks">
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="d">--</span
+                    ><span class="t-unit">j</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="h">--</span
+                    ><span class="t-unit">h</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="m">--</span
+                    ><span class="t-unit">m</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="s">--</span
+                    ><span class="t-unit">s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Billet
+                </button>
+                <button class="t-btn t-btn-checkin">
+                  <i class="fa-solid fa-arrow-right-to-bracket"></i> Check-in
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ TICKET 3 — Upcoming Paris ══ -->
+        <article class="ticket upcoming" data-depart="2025-09-22T08:05:00">
+          <div class="ticket-shimmer"></div>
+          <div class="ticket-stub">
+            <div class="stub-airline">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Air_France_Logo.svg/960px-Air_France_Logo.svg.png"
+                alt="Air France"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">AF 1584</div>
+            <div class="stub-class">Premium Éco</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">14D</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="AF1584-TUN-CDG-14D-250922"
+              ></canvas>
+            </div>
+          </div>
+          <div class="ticket-perf">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-top-row">
+              <div class="ticket-status upcoming-badge">
+                <i class="fa-solid fa-clock"></i> À venir
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0095102</strong></div>
+            </div>
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">TUN</span>
+                <span class="city-name">Tunis</span>
+                <span class="city-time">08:05</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">2h 30m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">CDG</span>
+                <span class="city-name">Paris</span>
+                <span class="city-time">10:35</span>
+              </div>
+            </div>
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i><span>22 Sep 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i><span>Porte D08</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i><span>23 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i><span>2 passagers</span>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <div class="ticket-timer" data-depart="2025-09-22T08:05:00">
+                <span class="timer-label">Départ dans</span>
+                <div class="timer-blocks">
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="d">--</span
+                    ><span class="t-unit">j</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="h">--</span
+                    ><span class="t-unit">h</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="m">--</span
+                    ><span class="t-unit">m</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="s">--</span
+                    ><span class="t-unit">s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Billet
+                </button>
+                <button class="t-btn t-btn-primary">
+                  <i class="fa-solid fa-check-circle"></i> Check-in
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ TICKET 4 — Completed Emirates ══ -->
+        <article class="ticket completed">
+          <div class="ticket-shimmer"></div>
+          <div class="ticket-stub ticket-stub-muted">
+            <div class="stub-airline">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Emirates_logo.svg/250px-Emirates_logo.svg.png?_=20250508163913"
+                alt="Emirates"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">EK 741</div>
+            <div class="stub-class">Économique</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">31C</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="EK741-TUN-DXB-31C-250310"
+              ></canvas>
+            </div>
+          </div>
+          <div class="ticket-perf ticket-perf-muted">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+          <div class="ticket-body ticket-body-muted">
+            <div class="ticket-top-row">
+              <div class="ticket-status completed-badge">
+                <i class="fa-solid fa-circle-check"></i> Terminé
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0078844</strong></div>
+            </div>
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">TUN</span>
+                <span class="city-name">Tunis</span>
+                <span class="city-time">09:15</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">5h 10m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">DXB</span>
+                <span class="city-name">Dubai</span>
+                <span class="city-time">14:25</span>
+              </div>
+            </div>
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i><span>10 Mars 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i><span>Porte C11</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i><span>25 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i><span>1 passager</span>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <div class="ticket-completed-msg">
+                <i class="fa-solid fa-plane-arrival"></i>
+                Voyage effectué — 3 804 miles gagnés
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Reçu
+                </button>
+                <button class="t-btn t-btn-rebook">
+                  <i class="fa-solid fa-rotate-right"></i> Rebooker
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ TICKET 5 — Completed ROM ══ -->
+        <article class="ticket completed">
+          <div class="ticket-shimmer"></div>
+          <div class="ticket-stub ticket-stub-muted">
+            <div class="stub-airline">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/fr/thumb/5/5c/Tunisair_%28logo%29.svg/3840px-Tunisair_%28logo%29.svg.png"
+                alt="Tunisair"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">TU 802</div>
+            <div class="stub-class">Économique</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">18B</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="TU802-TUN-FCO-18B-250118"
+              ></canvas>
+            </div>
+          </div>
+          <div class="ticket-perf ticket-perf-muted">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+          <div class="ticket-body ticket-body-muted">
+            <div class="ticket-top-row">
+              <div class="ticket-status completed-badge">
+                <i class="fa-solid fa-circle-check"></i> Terminé
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0071320</strong></div>
+            </div>
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">TUN</span>
+                <span class="city-name">Tunis</span>
+                <span class="city-time">07:40</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">1h 45m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">FCO</span>
+                <span class="city-name">Rome</span>
+                <span class="city-time">09:25</span>
+              </div>
+            </div>
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i><span>18 Jan 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i><span>Porte A03</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i><span>20 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i><span>3 passagers</span>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <div class="ticket-completed-msg">
+                <i class="fa-solid fa-plane-arrival"></i>
+                Voyage effectué — 1 260 miles gagnés
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Reçu
+                </button>
+                <button class="t-btn t-btn-rebook">
+                  <i class="fa-solid fa-rotate-right"></i> Rebooker
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ TICKET 6 — Cancelled ══ -->
+        <article class="ticket cancelled">
+          <div class="ticket-shimmer"></div>
+          <div class="ticket-stub ticket-stub-muted">
+            <div class="stub-airline">
+              <img
+                src="../images/logo-RM.png"
+                alt="Royal Air Maroc"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">AT 508</div>
+            <div class="stub-class">Économique</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">27A</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="AT508-TUN-CMN-27A-250520"
+              ></canvas>
+            </div>
+          </div>
+          <div class="ticket-perf ticket-perf-muted">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+          <div class="ticket-body ticket-body-muted">
+            <div class="cancelled-stamp">ANNULÉ</div>
+            <div class="ticket-top-row">
+              <div class="ticket-status cancelled-badge">
+                <i class="fa-solid fa-xmark"></i> Annulé
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0083667</strong></div>
+            </div>
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">TUN</span>
+                <span class="city-name">Tunis</span>
+                <span class="city-time">11:30</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">2h 05m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">CMN</span>
+                <span class="city-name">Casablanca</span>
+                <span class="city-time">13:35</span>
+              </div>
+            </div>
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i><span>20 Mai 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i><span>—</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i><span>20 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i><span>1 passager</span>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <div class="ticket-completed-msg" style="color: #ef5350">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                Annulé — Remboursement en cours
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Facture
+                </button>
+                <button class="t-btn t-btn-rebook">
+                  <i class="fa-solid fa-rotate-right"></i> Rebooker
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══ TICKET 7 — Upcoming upcoming ══ -->
+        <article class="ticket upcoming" data-depart="2025-12-24T22:00:00">
+          <div class="ticket-shimmer"></div>
+          <div class="ticket-stub">
+            <div class="stub-airline">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Qatar_Airways_Logo.png"
+                alt="Qatar Airways"
+                class="stub-airline-logo"
+              />
+            </div>
+            <div class="stub-flight">QR 135</div>
+            <div class="stub-class">Business</div>
+            <div class="stub-seat-wrap">
+              <span class="stub-seat-label">Siège</span>
+              <span class="stub-seat">1K</span>
+            </div>
+            <div class="stub-qr">
+              <canvas
+                class="qr-canvas"
+                data-code="QR135-DOH-LHR-1K-251224"
+              ></canvas>
+            </div>
+          </div>
+          <div class="ticket-perf">
+            <div class="perf-circle perf-top"></div>
+            <div class="perf-dots"></div>
+            <div class="perf-circle perf-bot"></div>
+          </div>
+          <div class="ticket-body">
+            <div class="ticket-top-row">
+              <div class="ticket-status upcoming-badge">
+                <i class="fa-solid fa-clock"></i> À venir
+              </div>
+              <div class="ticket-ref">Réf: <strong>JKT-0099780</strong></div>
+            </div>
+            <div class="ticket-route">
+              <div class="route-city">
+                <span class="city-code">DOH</span>
+                <span class="city-name">Doha</span>
+                <span class="city-time">22:00</span>
+              </div>
+              <div class="route-middle">
+                <div class="route-duration">7h 15m</div>
+                <div class="route-line">
+                  <span class="route-dot"></span>
+                  <span class="route-track"></span>
+                  <i class="fa-solid fa-plane route-plane-icon"></i>
+                  <span class="route-track"></span>
+                  <span class="route-dot"></span>
+                </div>
+                <div class="route-type">Direct</div>
+              </div>
+              <div class="route-city route-city-right">
+                <span class="city-code">LHR</span>
+                <span class="city-name">Londres</span>
+                <span class="city-time">05:15</span>
+              </div>
+            </div>
+            <div class="ticket-meta-row">
+              <div class="ticket-meta-item">
+                <i class="fa-regular fa-calendar"></i><span>24 Déc 2025</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-door-open"></i><span>Porte E01</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-suitcase"></i><span>40 kg inclus</span>
+              </div>
+              <div class="ticket-meta-item">
+                <i class="fa-solid fa-users"></i><span>2 passagers</span>
+              </div>
+            </div>
+            <div class="ticket-footer">
+              <div class="ticket-timer" data-depart="2025-12-24T22:00:00">
+                <span class="timer-label">Départ dans</span>
+                <div class="timer-blocks">
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="d">--</span
+                    ><span class="t-unit">j</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="h">--</span
+                    ><span class="t-unit">h</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="m">--</span
+                    ><span class="t-unit">m</span>
+                  </div>
+                  <div class="timer-sep">:</div>
+                  <div class="timer-block">
+                    <span class="t-val" data-unit="s">--</span
+                    ><span class="t-unit">s</span>
+                  </div>
+                </div>
+              </div>
+              <div class="ticket-actions">
+                <button class="t-btn t-btn-outline">
+                  <i class="fa-regular fa-file-pdf"></i> Billet
+                </button>
+                <button class="t-btn t-btn-primary">
+                  <i class="fa-solid fa-check-circle"></i> Check-in
+                </button>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!-- /res-grid -->
+
+      <!-- EMPTY STATE (hidden by default) -->
+      <div class="res-empty" id="res-empty" style="display: none">
+        <i class="fa-regular fa-folder-open"></i>
+        <p>Aucune réservation dans cette catégorie.</p>
+      </div>
+    </div>
+    <!-- /page -->
+
+    <script src="../js/reservations_script.js"></script>
+  </body>
+</html>

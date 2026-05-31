@@ -20,67 +20,71 @@
     <!-- ══════════════════════════════════════════
      NAVBAR
 ══════════════════════════════════════════ -->
-    <nav
-      id="navbar"
-      class="on-hero visible"
-      data-aos="fade-down"
-      style="background-color: #04152c"
-    >
+    <nav id="navbar" class="visible" style="background: #00063a">
       <div class="nav-inner">
-        <a href="../index.html" class="nav-logo">
+        <!-- Logo -->
+        <a href="#" class="nav-logo">
           <img
-            src="../images/logo_jektis.png"
             width="150"
+            src="../images/logo_jektis.png"
             alt="Jektis Travel Logo"
-            class="nav-logo-img"
           />
         </a>
+
+        <!-- Menu -->
         <ul class="nav-menu">
+          <!-- Séjours en Tunisie dropdown -->
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><i class="fa-regular fa-map"></i> Séjours en Tunisie
-              <i class="fa-solid fa-chevron-down"></i
-            ></a>
+            <a href="../pages/confirm-reservation.html" class="nav-link">
+              <i class="fa-regular fa-map"></i> Séjours en Tunisie
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
             <div class="dropdown">
-              <a href="#">Hôtels Tunis</a><a href="#">Hammamet</a
-              ><a href="#">Djerba</a> <a href="#">Sousse</a
-              ><a href="#">Monastir</a><a href="#">Mahdia</a>
-              <a href="#">Tabarka</a><a href="#">Tozeur</a
-              ><a href="#">Kairouan</a><a href="#">Sfax</a>
+              <a href="#"
+                ><i class="fa-regular fa-building mr-1"></i> Hôtels Tunis</a
+              >
+              <a href="#"><i class="fa-regular fa-sun mr-1"></i> Hammamet</a>
+              <a href="#"><i class="fa-regular fa-compass mr-1"></i> Korba</a>
+              <a href="#"><i class="fa-regular fa-map-dot mr-1"></i> Nabeul</a>
+              <a href="#">Korbous</a>
+              <a href="#">Sousse</a>
+              <a href="#">Monastir</a>
+              <a href="#">Mahdia</a>
+              <a href="#">Tabarka</a>
+              <a href="#">Ain Draham</a>
+              <a href="#">Tozeur</a>
+              <a href="#">Djerba</a>
+              <a href="#">Kairouan</a>
+              <a href="#">Sfax</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><i class="fa-regular fa-globe"></i> Destinations</a
+            <a href="../pages/programme.html" class="nav-link"
+              ><i class="fa-solid fa-truck-plane"></i> Programmes</a
             >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><i class="fa-regular fa-plane"></i> Vols</a
+            <a href="../pages/vol.html" class="nav-link"
+              ><i class="fa-solid fa-plane-departure"></i> Vols</a
             >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"
+            <a href="../pages/auth.html" class="nav-link"
               ><i class="fa-regular fa-id-card"></i> Visa</a
             >
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link"
-              ><i class="fa-regular fa-briefcase"></i> Espace Entreprise</a
+            <a href="../pages/reservations.html" class="nav-link"
+              ><i class="fa-solid fa-car-rear"></i> Réservations</a
             >
           </li>
         </ul>
+
+        <!-- Actions -->
         <div class="nav-actions">
-          <a
-            href="../index.html"
-            class="btn btn-ghost"
-            style="font-size: 0.82rem; padding: 8px 18px"
-          >
-            <i class="fa-solid fa-arrow-left"></i> Retour
-          </a>
-          <button class="nav-login btn">
+          <a href="../pages/auth.html" class="nav-login btn">
             <i class="fa-regular fa-user"></i> Connexion
-          </button>
+          </a>
         </div>
       </div>
     </nav>
