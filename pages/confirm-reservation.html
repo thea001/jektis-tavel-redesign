@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Réservation — Radisson Blu Tunis | Jektis Travel</title>
+    <title>Réservation — Portugal & Espagnes | Jektis Travel</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/reservation.css" />
+    <link rel="stylesheet" href="../css/vol.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -17,77 +19,120 @@
     />
   </head>
   <body>
-    <!-- ══════════════════════════════════════════
-     NAVBAR
-══════════════════════════════════════════ -->
-    <nav id="navbar" class="visible" style="background: #00063a">
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="navbar" class="scrolled visible">
       <div class="nav-inner">
-        <!-- Logo -->
-        <a href="#" class="nav-logo">
+        <a href="../index.html" class="nav-logo">
           <img
             width="150"
             src="../images/logo_jektis.png"
-            alt="Jektis Travel Logo"
+            alt="Jektis Travel"
           />
         </a>
-
-        <!-- Menu -->
+        <!-- Desktop menu -->
         <ul class="nav-menu">
-          <!-- Séjours en Tunisie dropdown -->
           <li class="nav-item">
-            <a href="../pages/confirm-reservation.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="fa-regular fa-map"></i> Séjours en Tunisie
               <i class="fa-solid fa-chevron-down"></i>
             </a>
             <div class="dropdown">
               <a href="#"
-                ><i class="fa-regular fa-building mr-1"></i> Hôtels Tunis</a
+                ><i class="fa-regular fa-building"></i> Hôtels Tunis</a
               >
-              <a href="#"><i class="fa-regular fa-sun mr-1"></i> Hammamet</a>
-              <a href="#"><i class="fa-regular fa-compass mr-1"></i> Korba</a>
-              <a href="#"><i class="fa-regular fa-map-dot mr-1"></i> Nabeul</a>
-              <a href="#">Korbous</a>
-              <a href="#">Sousse</a>
-              <a href="#">Monastir</a>
-              <a href="#">Mahdia</a>
-              <a href="#">Tabarka</a>
-              <a href="#">Ain Draham</a>
-              <a href="#">Tozeur</a>
-              <a href="#">Djerba</a>
-              <a href="#">Kairouan</a>
-              <a href="#">Sfax</a>
+              <a href="#"><i class="fa-regular fa-sun"></i> Hammamet</a>
+              <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Korbous</a
+              ><a href="#">Sousse</a> <a href="#">Monastir</a
+              ><a href="#">Mahdia</a> <a href="#">Tabarka</a
+              ><a href="#">Ain Draham</a> <a href="#">Tozeur</a
+              ><a href="#">Djerba</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="../pages/programme.html" class="nav-link"
-              ><i class="fa-solid fa-truck-plane"></i> Programmes</a
+            <a href="voyage-organise.html" class="nav-link"
+              ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</a
             >
           </li>
           <li class="nav-item">
-            <a href="../pages/vol.html" class="nav-link"
+            <a href="vol.html" class="nav-link"
               ><i class="fa-solid fa-plane-departure"></i> Vols</a
             >
           </li>
           <li class="nav-item">
-            <a href="../pages/auth.html" class="nav-link"
+            <a href="#" class="nav-link"
               ><i class="fa-regular fa-id-card"></i> Visa</a
             >
           </li>
+
           <li class="nav-item">
-            <a href="../pages/reservations.html" class="nav-link"
-              ><i class="fa-solid fa-car-rear"></i> Réservations</a
+            <a href="reservations.html" class="nav-link nav-link-active"
+              ><i class="fa-solid fa-ticket"></i> Réservations</a
             >
           </li>
         </ul>
-
-        <!-- Actions -->
         <div class="nav-actions">
-          <a href="../pages/auth.html" class="nav-login btn">
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+          </button>
+          <a href="auth.html" class="nav-login btn">
             <i class="fa-regular fa-user"></i> Connexion
           </a>
         </div>
       </div>
     </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer">
+      <div class="mob-item" data-has-dropdown>
+        <a href="#" class="mob-link">
+          <span class="mob-link-left"
+            ><i class="fa-regular fa-map"></i> Séjours en Tunisie</span
+          >
+          <i class="fa-solid fa-chevron-down mob-chevron"></i>
+        </a>
+        <div class="mob-dropdown">
+          <a href="#">Hôtels Tunis</a><a href="#">Hammamet</a>
+          <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Sousse</a
+          ><a href="#">Djerba</a> <a href="#">Tozeur</a><a href="#">Tabarka</a>
+        </div>
+      </div>
+
+      <div class="mob-item">
+        <a href="voyage-organise.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</span
+          ></a
+        >
+      </div>
+      <div class="mob-item">
+        <a href="vol.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-plane-departure"></i> Vols</span
+          ></a
+        >
+      </div>
+      <div class="mob-item">
+        <a href="#" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-regular fa-id-card"></i> Visa</span
+          ></a
+        >
+      </div>
+
+      <div class="mob-item">
+        <a href="reservations.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-ticket"></i> Réservations</span
+          ></a
+        >
+      </div>
+      <a href="auth.html" class="mob-login"
+        ><i class="fa-regular fa-user"></i> Connexion</a
+      >
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <!-- ══ PAGE ═════════════════════════════════════ -->
     <div class="res-page">
@@ -562,16 +607,14 @@
               <div class="sum-hotel">
                 <img
                   class="sum-hotel-img"
-                  src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=200&q=80"
-                  alt="Radisson Blu"
+                  src="../images/home_2.jpeg"
+                  alt="Espagne"
                 />
                 <div>
-                  <div class="sum-hotel-name">
-                    Radisson Blu Hotel &amp; Conference Center
-                  </div>
+                  <div class="sum-hotel-name">Portugal &amp; Espagne</div>
                   <div class="sum-hotel-loc">
-                    <i class="fa-solid fa-location-dot"></i> Place des Droits de
-                    l'Homme, 1001 Tunis
+                    <i class="fa-solid fa-location-dot"></i> Lisbonne, Porto,
+                    Madrid &amp; Séville
                   </div>
                   <div class="sum-stars">★★★★★</div>
                 </div>
@@ -584,19 +627,19 @@
                 <span class="lbl"
                   ><i class="fa-regular fa-calendar-check"></i> Arrivée</span
                 >
-                <span class="val">31 Mai 2026</span>
+                <span class="val">29 juin 2026</span>
               </div>
               <div class="sum-row">
                 <span class="lbl"
                   ><i class="fa-regular fa-calendar-xmark"></i> Départ</span
                 >
-                <span class="val">01 Juin 2026</span>
+                <span class="val">31 juil 2026</span>
               </div>
               <div class="sum-row">
                 <span class="lbl"
                   ><i class="fa-regular fa-moon"></i> Durée</span
                 >
-                <span class="val">1 nuit</span>
+                <span class="val">8 nuit</span>
               </div>
               <div class="sum-row">
                 <span class="lbl"><i class="fa-solid fa-bed"></i> Chambre</span>
@@ -621,16 +664,16 @@
               <!-- Pricing -->
               <div class="sum-line">
                 <span class="lbl">Hébergement</span>
-                <span class="val">576,800 TND</span>
+                <span class="val">3 000 TND</span>
               </div>
               <div class="sum-line">
                 <span class="lbl">Frais de dossier</span>
-                <span class="val">+ 6,990 TND</span>
+                <span class="val">+ 3,890 TND</span>
               </div>
 
               <div class="sum-total">
                 <span class="lbl">Montant Total</span>
-                <span class="val">583,790 TND</span>
+                <span class="val">6 890 TND</span>
               </div>
 
               <a href="#" class="modify-link">
@@ -734,13 +777,487 @@
           </div>
         </aside>
       </div>
+      <!-- ══ STEP 3 — CONFIRMATION SCREEN (hidden until submit) ══ -->
+      <div id="step3-screen" style="display: none">
+        <div
+          class="res-page"
+          style="
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 16px;
+          "
+        >
+          <!-- Updated stepper showing step 3 active -->
+          <div
+            class="stepper"
+            style="width: 100%; max-width: 560px; margin-bottom: 40px"
+          >
+            <div class="stepper-inner">
+              <div class="step done">
+                <div class="step-circle">
+                  <i class="fa-solid fa-check" style="font-size: 0.7rem"></i>
+                </div>
+                <span class="step-label">Sélection</span>
+              </div>
+              <div class="step done">
+                <div class="step-circle">
+                  <i class="fa-solid fa-check" style="font-size: 0.7rem"></i>
+                </div>
+                <span class="step-label">Coordonnées</span>
+              </div>
+              <div class="step active">
+                <div class="step-circle">3</div>
+                <span class="step-label">Confirmation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Success card -->
+          <div
+            style="
+              background: #fff;
+              border-radius: 24px;
+              box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+              padding: 48px 40px 40px;
+              max-width: 540px;
+              width: 100%;
+              text-align: center;
+              animation: confPop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            "
+          >
+            <!-- Animated checkmark -->
+            <div
+              style="
+                width: 88px;
+                height: 88px;
+                background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 24px;
+                font-size: 42px;
+                color: #16a34a;
+                animation: confPop 0.6s 0.1s cubic-bezier(0.34, 1.56, 0.64, 1)
+                  both;
+              "
+            >
+              <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <h2
+              style="
+                font-size: 1.55rem;
+                font-weight: 800;
+                color: #111;
+                margin: 0 0 10px;
+              "
+            >
+              Réservation confirmée avec succès !
+            </h2>
+
+            <p
+              style="
+                font-size: 1rem;
+                color: #555;
+                line-height: 1.7;
+                margin: 0 0 24px;
+              "
+            >
+              Veuillez vérifier votre boîte mail.<br />
+              Un e-mail de confirmation a été envoyé avec tous les détails de
+              votre réservation.
+            </p>
+
+            <!-- Ref number -->
+            <div
+              style="
+                background: #f3f4f6;
+                border-radius: 12px;
+                padding: 14px 24px;
+                display: inline-block;
+                margin-bottom: 28px;
+                font-size: 0.9rem;
+                color: #444;
+              "
+            >
+              Référence de réservation :
+              <strong
+                id="conf-ref"
+                style="
+                  color: #1a56db;
+                  font-size: 1.05rem;
+                  letter-spacing: 1px;
+                  display: block;
+                  margin-top: 4px;
+                "
+              ></strong>
+            </div>
+
+            <!-- Summary strip -->
+            <div
+              style="
+                background: var(--primary-pale, #eff6ff);
+                border-radius: 14px;
+                padding: 16px 20px;
+                text-align: left;
+                margin-bottom: 28px;
+                font-size: 0.85rem;
+                color: #333;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+              "
+            >
+              <div style="display: flex; justify-content: space-between">
+                <span style="color: #666"
+                  ><i
+                    class="fa-regular fa-building"
+                    style="margin-right: 6px"
+                  ></i
+                  >Voyage en groupe</span
+                >
+                <span style="font-weight: 600">Portugal & Espagne</span>
+              </div>
+              <div style="display: flex; justify-content: space-between">
+                <span style="color: #666"
+                  ><i
+                    class="fa-regular fa-calendar-check"
+                    style="margin-right: 6px"
+                  ></i
+                  >Arrivée</span
+                >
+                <span style="font-weight: 600">31 Mai 2026</span>
+              </div>
+              <div style="display: flex; justify-content: space-between">
+                <span style="color: #666"
+                  ><i
+                    class="fa-regular fa-calendar-xmark"
+                    style="margin-right: 6px"
+                  ></i
+                  >Départ</span
+                >
+                <span style="font-weight: 600">01 Juil 2026</span>
+              </div>
+              <div
+                style="
+                  border-top: 1px solid #dde6f5;
+                  padding-top: 8px;
+                  display: flex;
+                  justify-content: space-between;
+                "
+              >
+                <span style="font-weight: 700; color: #111">Montant Total</span>
+                <span style="font-weight: 800; color: #1a56db; font-size: 1rem"
+                  >6 980 TND</span
+                >
+              </div>
+            </div>
+
+            <!-- CTA buttons -->
+            <div
+              style="
+                display: flex;
+                gap: 12px;
+                justify-content: center;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="voyage-organise.html"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  background: linear-gradient(135deg, #1a56db, #1e3a8a);
+                  color: #fff;
+                  border-radius: 12px;
+                  padding: 12px 24px;
+                  font-size: 0.9rem;
+                  font-weight: 600;
+                  text-decoration: none;
+                  transition: opacity 0.2s;
+                "
+                onmouseover="this.style.opacity = '.88'"
+                onmouseout="this.style.opacity = '1'"
+              >
+                <i class="fa-solid fa-earth-africa"></i> Explorer d'autres
+                voyages
+              </a>
+              <a
+                href="reservations.html"
+                style="
+                  display: inline-flex;
+                  align-items: center;
+                  gap: 8px;
+                  background: #f3f4f6;
+                  color: #333;
+                  border-radius: 12px;
+                  padding: 12px 24px;
+                  font-size: 0.9rem;
+                  font-weight: 600;
+                  text-decoration: none;
+                  transition: background 0.2s;
+                "
+                onmouseover="this.style.background = '#e5e7eb'"
+                onmouseout="this.style.background = '#f3f4f6'"
+              >
+                <i class="fa-solid fa-ticket"></i> Mes réservations
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- /res-grid -->
+      <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+      <footer class="vol-footer">
+        <div class="container">
+          <div class="vol-footer-grid">
+            <!-- Brand -->
+            <div class="vol-footer-brand">
+              <a
+                href="index.html"
+                class="nav-logo"
+                style="margin-bottom: 18px; display: inline-flex"
+              >
+                <img
+                  width="200"
+                  src="../images/logo_jektis.png"
+                  alt="Jektis Travel"
+                />
+              </a>
+              <p>
+                Votre agence de voyage de confiance en Tunisie. Des billets
+                d'avion aux séjours tout compris, nous vous accompagnons partout
+                dans le monde.
+              </p>
+              <div class="vol-footer-social">
+                <a href="#" aria-label="Facebook"
+                  ><i class="fa-brands fa-facebook-f"></i
+                ></a>
+                <a href="#" aria-label="Instagram"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+                <a href="#" aria-label="Twitter"
+                  ><i class="fa-brands fa-x-twitter"></i
+                ></a>
+                <a href="#" aria-label="WhatsApp"
+                  ><i class="fa-brands fa-whatsapp"></i
+                ></a>
+              </div>
+            </div>
+
+            <!-- Links -->
+            <div class="vol-footer-col">
+              <h4>Services</h4>
+              <ul>
+                <li>
+                  <a href="vol.html"
+                    ><i class="fa-solid fa-plane fa-xs"></i> Vols</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-building fa-xs"></i> Hôtels</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-map fa-xs"></i> Voyages organisés</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fa-solid fa-id-card fa-xs"></i> Visa</a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-briefcase fa-xs"></i> Entreprises</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Destinations -->
+            <div class="vol-footer-col">
+              <h4>Destinations</h4>
+              <ul>
+                <li><a href="#">Paris</a></li>
+                <li><a href="#">Londres</a></li>
+                <li><a href="#">Istanbul</a></li>
+                <li><a href="#">Dubai</a></li>
+                <li><a href="#">Rome</a></li>
+                <li><a href="#">Montréal</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="vol-footer-col">
+              <h4>Contact</h4>
+              <ul class="vol-footer-contact">
+                <li>
+                  <i class="fa-solid fa-phone"></i><span>+216 71 706 900</span>
+                </li>
+                <li>
+                  <i class="fa-brands fa-whatsapp"></i
+                  ><span>+216 98 538 070</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope"></i
+                  ><span>contact@jektistravel.tn</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i
+                  ><span
+                    >Agence Ariana: 89 AV H Bourguiba 2éme Etage Ariana</span
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i
+                  ><span
+                    >Agence Menzah 9: 22 AV Abdelaziz Thaalbi Menzah 9A</span
+                  >
+                </li>
+                <li>
+                  <i class="fa-solid fa-clock"></i
+                  ><span>Lun – Ven : 8:30h – 18h</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-clock"></i
+                  ><span>Lun – Ven : 8:30h – 13:30h</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="vol-footer-bottom">
+            <span>© 2026 Jektis Travel — Tous droits réservés</span>
+            <div class="vol-footer-bottom-links">
+              <a href="#">Mentions légales</a>
+              <a href="#">Politique de confidentialité</a>
+              <a href="#">CGV</a>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
     <!-- /res-page -->
+
+    <style>
+      @keyframes confPop {
+        from {
+          opacity: 0;
+          transform: scale(0.7);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
 
     <!-- SCRIPTS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="../js/navbar.js"></script>
     <script src="../js/reservation.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const submitBtn = document.getElementById("res-submit-btn");
+        const resForm = document.getElementById("res-form");
+        const termsCheck = document.getElementById("terms-check");
+        const mainContent = document.querySelector(".res-grid");
+        const stepper = document.querySelector(".stepper");
+        const step3Screen = document.getElementById("step3-screen");
+
+        submitBtn?.addEventListener("click", () => {
+          // Validate terms checkbox
+          if (!termsCheck?.checked) {
+            termsCheck.closest(".terms-row").style.outline =
+              "2px solid #ef4444";
+            termsCheck.closest(".terms-row").style.borderRadius = "8px";
+            termsCheck.closest(".terms-row").style.padding = "8px";
+            termsCheck.scrollIntoView({ behavior: "smooth", block: "center" });
+            setTimeout(() => {
+              if (termsCheck.closest(".terms-row")) {
+                termsCheck.closest(".terms-row").style.outline = "";
+              }
+            }, 2500);
+            return;
+          }
+
+          // Loading state on button
+          submitBtn.disabled = true;
+          submitBtn.innerHTML =
+            '<i class="fa-solid fa-spinner fa-spin"></i> Traitement en cours…';
+
+          // Simulate processing delay then show step 3
+          setTimeout(() => {
+            // Generate reference number
+            const ref =
+              "JKT-" +
+              Math.random().toString(36).substring(2, 7).toUpperCase() +
+              "-" +
+              Date.now().toString().slice(-4);
+            document.getElementById("conf-ref").textContent = ref;
+
+            // Hide the form page, show confirmation
+            if (mainContent) mainContent.style.display = "none";
+            if (stepper) stepper.style.display = "none";
+            if (step3Screen) step3Screen.style.display = "block";
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }, 1400);
+        });
+
+        // Civil radio styling
+        document.querySelectorAll(".civil-opt input").forEach((radio) => {
+          radio.addEventListener("change", () => {
+            radio
+              .closest(".civil-group")
+              ?.querySelectorAll(".civil-opt")
+              .forEach((o) => o.classList.remove("selected"));
+            radio.closest(".civil-opt")?.classList.add("selected");
+          });
+        });
+
+        // Wish chips toggle
+        document.querySelectorAll(".wish-chip").forEach((chip) => {
+          chip.addEventListener("click", () => chip.classList.toggle("active"));
+        });
+
+        // Payment option selection
+        document.querySelectorAll(".pay-opt").forEach((opt) => {
+          opt.addEventListener("click", () => {
+            document
+              .querySelectorAll(".pay-opt")
+              .forEach((o) => o.classList.remove("selected"));
+            opt.classList.add("selected");
+            const agencyWrap = document.getElementById("agency-wrap");
+            if (agencyWrap) {
+              agencyWrap.classList.toggle(
+                "visible",
+                opt.dataset.pay === "agency-full" ||
+                  opt.dataset.pay === "agency-split",
+              );
+            }
+          });
+        });
+
+        // Agency tabs
+        document.querySelectorAll(".agency-tab").forEach((tab) => {
+          tab.addEventListener("click", () => {
+            document
+              .querySelectorAll(".agency-tab")
+              .forEach((t) => t.classList.remove("active"));
+            tab.classList.add("active");
+          });
+        });
+
+        AOS.init({ duration: 700, once: true, offset: 60 });
+      });
+    </script>
   </body>
 </html>

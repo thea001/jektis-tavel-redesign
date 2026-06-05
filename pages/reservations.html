@@ -15,6 +15,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="../css/reservations.css" />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/vol.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
   </head>
   <body>
     <!-- ─── NOISE OVERLAY ─── -->
@@ -22,51 +25,124 @@
 
     <!-- ─── PAGE ─── -->
     <div class="page">
-      <!-- HEADER -->
-      <header class="res-header">
-        <div class="res-header-left">
-          <div class="res-logo">
-            <div>
-              <span class="res-logo-name">Jektis<em>Travel</em></span>
-              <span class="res-logo-sub">Espace Voyageur</span>
-            </div>
-          </div>
-        </div>
-        <div class="res-header-right">
-          <div class="res-user">
-            <div class="res-user-avatar">AK</div>
-            <div class="res-user-info">
-              <span class="res-user-name">Ahmed Karray</span>
-              <span class="res-user-tier"
-                ><i class="fa-solid fa-crown"></i> Gold Member</span
+      <!-- ═══════════ NAVBAR ═══════════ -->
+      <nav id="navbar" class="scrolled visible">
+        <div class="nav-inner">
+          <a href="../index.html" class="nav-logo">
+            <img
+              width="150"
+              src="../images/logo_jektis.png"
+              alt="Jektis Travel"
+            />
+          </a>
+          <!-- Desktop menu -->
+          <ul class="nav-menu">
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fa-regular fa-map"></i> Séjours en Tunisie
+                <i class="fa-solid fa-chevron-down"></i>
+              </a>
+              <div class="dropdown">
+                <a href="#"
+                  ><i class="fa-regular fa-building"></i> Hôtels Tunis</a
+                >
+                <a href="#"><i class="fa-regular fa-sun"></i> Hammamet</a>
+                <a href="#">Korba</a><a href="#">Nabeul</a>
+                <a href="#">Korbous</a><a href="#">Sousse</a>
+                <a href="#">Monastir</a><a href="#">Mahdia</a>
+                <a href="#">Tabarka</a><a href="#">Ain Draham</a>
+                <a href="#">Tozeur</a><a href="#">Djerba</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="voyage-organise.html" class="nav-link"
+                ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</a
               >
-            </div>
+            </li>
+            <li class="nav-item">
+              <a href="vol.html" class="nav-link"
+                ><i class="fa-solid fa-plane-departure"></i> Vols</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link"
+                ><i class="fa-regular fa-id-card"></i> Visa</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a href="reservations.html" class="nav-link nav-link-active"
+                ><i class="fa-solid fa-ticket"></i> Réservations</a
+              >
+            </li>
+          </ul>
+          <div class="nav-actions">
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+              <span class="ham-bar"></span>
+              <span class="ham-bar"></span>
+              <span class="ham-bar"></span>
+            </button>
+            <a href="auth.html" class="nav-login btn">
+              <i class="fa-regular fa-user"></i> Connexion
+            </a>
           </div>
         </div>
-      </header>
+      </nav>
+
+      <!-- Mobile drawer -->
+      <div class="nav-mobile-drawer" id="nav-mobile-drawer">
+        <div class="mob-item" data-has-dropdown>
+          <a href="#" class="mob-link">
+            <span class="mob-link-left"
+              ><i class="fa-regular fa-map"></i> Séjours en Tunisie</span
+            >
+            <i class="fa-solid fa-chevron-down mob-chevron"></i>
+          </a>
+          <div class="mob-dropdown">
+            <a href="#">Hôtels Tunis</a><a href="#">Hammamet</a>
+            <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Sousse</a
+            ><a href="#">Djerba</a> <a href="#">Tozeur</a
+            ><a href="#">Tabarka</a>
+          </div>
+        </div>
+
+        <div class="mob-item">
+          <a href="voyage-organise.html" class="mob-link"
+            ><span class="mob-link-left"
+              ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</span
+            ></a
+          >
+        </div>
+        <div class="mob-item">
+          <a href="vol.html" class="mob-link"
+            ><span class="mob-link-left"
+              ><i class="fa-solid fa-plane-departure"></i> Vols</span
+            ></a
+          >
+        </div>
+        <div class="mob-item">
+          <a href="#" class="mob-link"
+            ><span class="mob-link-left"
+              ><i class="fa-regular fa-id-card"></i> Visa</span
+            ></a
+          >
+        </div>
+
+        <div class="mob-item">
+          <a href="reservations.html" class="mob-link"
+            ><span class="mob-link-left"
+              ><i class="fa-solid fa-ticket"></i> Réservations</span
+            ></a
+          >
+        </div>
+        <a href="auth.html" class="mob-login"
+          ><i class="fa-regular fa-user"></i> Connexion</a
+        >
+      </div>
+      <div class="nav-backdrop" id="nav-backdrop"></div>
 
       <!-- HERO STATS BAR -->
-      <section class="res-stats-bar">
-        <div class="res-stat">
-          <span class="res-stat-val">7</span>
-          <span class="res-stat-key">Réservations</span>
-        </div>
-        <div class="res-stat-sep"></div>
-        <div class="res-stat">
-          <span class="res-stat-val">3</span>
-          <span class="res-stat-key">À venir</span>
-        </div>
-        <div class="res-stat-sep"></div>
-        <div class="res-stat">
-          <span class="res-stat-val">14 280</span>
-          <span class="res-stat-key">Miles accumulés</span>
-        </div>
-        <div class="res-stat-sep"></div>
-        <div class="res-stat">
-          <span class="res-stat-val">12</span>
-          <span class="res-stat-key">Pays visités</span>
-        </div>
-      </section>
+      <section class="res-stats-bar"></section>
 
       <!-- TITLE + FILTERS -->
       <section class="res-controls">
@@ -822,6 +898,134 @@
     </div>
     <!-- /page -->
 
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="vol-footer">
+      <div class="container">
+        <div class="vol-footer-grid">
+          <!-- Brand -->
+          <div class="vol-footer-brand">
+            <a
+              href="index.html"
+              class="nav-logo"
+              style="margin-bottom: 18px; display: inline-flex"
+            >
+              <img
+                width="200"
+                src="../images/logo_jektis.png"
+                alt="Jektis Travel"
+              />
+            </a>
+            <p>
+              Votre agence de voyage de confiance en Tunisie. Des billets
+              d'avion aux séjours tout compris, nous vous accompagnons partout
+              dans le monde.
+            </p>
+            <div class="vol-footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="vol-footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li>
+                <a href="vol.html"
+                  ><i class="fa-solid fa-plane fa-xs"></i> Vols</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-building fa-xs"></i> Hôtels</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-map fa-xs"></i> Voyages organisés</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-id-card fa-xs"></i> Visa</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-briefcase fa-xs"></i> Entreprises</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Destinations -->
+          <div class="vol-footer-col">
+            <h4>Destinations</h4>
+            <ul>
+              <li><a href="#">Paris</a></li>
+              <li><a href="#">Londres</a></li>
+              <li><a href="#">Istanbul</a></li>
+              <li><a href="#">Dubai</a></li>
+              <li><a href="#">Rome</a></li>
+              <li><a href="#">Montréal</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="vol-footer-col">
+            <h4>Contact</h4>
+            <ul class="vol-footer-contact">
+              <li>
+                <i class="fa-solid fa-phone"></i><span>+216 71 706 900</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i
+                ><span>+216 98 538 070</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><span>contact@jektistravel.tn</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Agence Ariana: 89 AV H Bourguiba 2éme Etage Ariana</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Agence Menzah 9: 22 AV Abdelaziz Thaalbi Menzah 9A</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i
+                ><span>Lun – Ven : 8:30h – 18h</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i
+                ><span>Lun – Ven : 8:30h – 13:30h</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="vol-footer-bottom">
+          <span>© 2026 Jektis Travel — Tous droits réservés</span>
+          <div class="vol-footer-bottom-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="../js/reservations_script.js"></script>
+    <script src="./js/navbar.js"></script>
   </body>
 </html>

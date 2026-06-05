@@ -1,0 +1,1196 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Voyages Organisés — Jektis Travel</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/vol.css" />
+    <link rel="stylesheet" href="../css/voyage-organise.css" />
+  </head>
+  <body>
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="navbar" class="scrolled visible">
+      <div class="nav-inner">
+        <a href="../index.html" class="nav-logo">
+          <img
+            width="150"
+            src="../images/logo_jektis.png"
+            alt="Jektis Travel"
+          />
+        </a>
+        <!-- Desktop menu -->
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa-regular fa-map"></i> Séjours en Tunisie
+              <i class="fa-solid fa-chevron-down"></i>
+            </a>
+            <div class="dropdown">
+              <a href="#"
+                ><i class="fa-regular fa-building"></i> Hôtels Tunis</a
+              >
+              <a href="#"><i class="fa-regular fa-sun"></i> Hammamet</a>
+              <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Korbous</a
+              ><a href="#">Sousse</a> <a href="#">Monastir</a
+              ><a href="#">Mahdia</a> <a href="#">Tabarka</a
+              ><a href="#">Ain Draham</a> <a href="#">Tozeur</a
+              ><a href="#">Djerba</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="voyage-organise.html" class="nav-link nav-link-active"
+              ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="vol.html" class="nav-link"
+              ><i class="fa-solid fa-plane-departure"></i> Vols</a
+            >
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link"
+              ><i class="fa-regular fa-id-card"></i> Visa</a
+            >
+          </li>
+
+          <li class="nav-item">
+            <a href="reservations.html" class="nav-link"
+              ><i class="fa-solid fa-ticket"></i> Réservations</a
+            >
+          </li>
+        </ul>
+        <div class="nav-actions">
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+          </button>
+          <a href="auth.html" class="nav-login btn">
+            <i class="fa-regular fa-user"></i> Connexion
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer">
+      <div class="mob-item" data-has-dropdown>
+        <a href="#" class="mob-link">
+          <span class="mob-link-left"
+            ><i class="fa-regular fa-map"></i> Séjours en Tunisie</span
+          >
+          <i class="fa-solid fa-chevron-down mob-chevron"></i>
+        </a>
+        <div class="mob-dropdown">
+          <a href="#">Hôtels Tunis</a><a href="#">Hammamet</a>
+          <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Sousse</a
+          ><a href="#">Djerba</a> <a href="#">Tozeur</a><a href="#">Tabarka</a>
+        </div>
+      </div>
+
+      <div class="mob-item">
+        <a href="voyage-organise.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</span
+          ></a
+        >
+      </div>
+      <div class="mob-item">
+        <a href="vol.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-plane-departure"></i> Vols</span
+          ></a
+        >
+      </div>
+      <div class="mob-item">
+        <a href="#" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-regular fa-id-card"></i> Visa</span
+          ></a
+        >
+      </div>
+
+      <div class="mob-item">
+        <a href="reservations.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-ticket"></i> Réservations</span
+          ></a
+        >
+      </div>
+      <a href="auth.html" class="mob-login"
+        ><i class="fa-regular fa-user"></i> Connexion</a
+      >
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section class="vo-hero">
+      <div class="vo-hero-bg">
+        <img
+          src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80"
+          alt=""
+        />
+      </div>
+      <div class="vo-hero-overlay"></div>
+      <div class="vo-hero-content">
+        <div class="vo-hero-badge">
+          <i class="fa-solid fa-earth-africa"></i> Voyages Organisés
+        </div>
+        <h1 class="vo-hero-title">
+          Explorez le monde<br /><em>sans vous soucier de rien</em>
+        </h1>
+        <p class="vo-hero-sub">
+          Des circuits soigneusement préparés, des guides passionnés, des
+          souvenirs inoubliables.
+        </p>
+        <div class="vo-hero-stats">
+          <div class="vo-stat">
+            <strong>120+</strong><span>Destinations</span>
+          </div>
+          <div class="vo-stat-sep"></div>
+          <div class="vo-stat">
+            <strong>4.8★</strong><span>Satisfaction</span>
+          </div>
+          <div class="vo-stat-sep"></div>
+          <div class="vo-stat"><strong>50k+</strong><span>Voyageurs</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ MAIN LAYOUT ═══════════ -->
+    <div class="vo-layout">
+      <!-- ─── LEFT SIDEBAR FILTERS ─── -->
+      <aside class="vo-sidebar" id="vo-sidebar">
+        <div class="vo-sidebar-header">
+          <h3><i class="fa-solid fa-sliders"></i> Filtres</h3>
+          <button class="vo-reset-btn" id="vo-reset">Réinitialiser</button>
+        </div>
+
+        <!-- Tour type -->
+        <div class="vo-filter-group">
+          <div class="vo-filter-title" data-collapse="type">
+            <span><i class="fa-solid fa-compass"></i> Type de circuit</span>
+            <i class="fa-solid fa-chevron-down vo-chevron"></i>
+          </div>
+          <div class="vo-filter-body" id="filter-type">
+            <label class="vo-check"
+              ><input type="checkbox" value="aventure" checked /><span></span
+              >Aventure &amp; Nature</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="culture" /><span></span>Culture
+              &amp; Patrimoine</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="plage" /><span></span>Soleil &amp;
+              Plage</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="famille" /><span></span>Voyage en
+              Famille</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="luxe" /><span></span>Luxe &amp;
+              Confort</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="sahara" /><span></span>Désert &amp;
+              Sahara</label
+            >
+          </div>
+        </div>
+
+        <!-- Language -->
+        <div class="vo-filter-group">
+          <div class="vo-filter-title" data-collapse="lang">
+            <span><i class="fa-solid fa-language"></i> Langue du guide</span>
+            <i class="fa-solid fa-chevron-down vo-chevron"></i>
+          </div>
+          <div class="vo-filter-body" id="filter-lang">
+            <label class="vo-check"
+              ><input type="checkbox" value="fr" checked /><span></span
+              >Français</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="ar" /><span></span>Arabe</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="en" /><span></span>Anglais</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="de" /><span></span>Allemand</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="it" /><span></span>Italien</label
+            >
+          </div>
+        </div>
+
+        <!-- Price range -->
+        <div class="vo-filter-group">
+          <div class="vo-filter-title" data-collapse="price">
+            <span><i class="fa-solid fa-tag"></i> Budget (TND/pers.)</span>
+            <i class="fa-solid fa-chevron-down vo-chevron"></i>
+          </div>
+          <div class="vo-filter-body" id="filter-price">
+            <div class="vo-price-vals">
+              <span id="price-min-label">0</span>
+              <span id="price-max-label">5000</span>
+            </div>
+            <div class="vo-range-wrap">
+              <input
+                type="range"
+                id="range-min"
+                min="0"
+                max="5000"
+                step="50"
+                value="0"
+              />
+              <input
+                type="range"
+                id="range-max"
+                min="0"
+                max="5000"
+                step="50"
+                value="5000"
+              />
+              <div class="vo-range-track">
+                <div class="vo-range-fill" id="range-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dates -->
+        <div class="vo-filter-group">
+          <div class="vo-filter-title" data-collapse="date">
+            <span
+              ><i class="fa-regular fa-calendar"></i> Période de départ</span
+            >
+            <i class="fa-solid fa-chevron-down vo-chevron"></i>
+          </div>
+          <div class="vo-filter-body" id="filter-date">
+            <div class="vo-date-row">
+              <label>Du</label>
+              <input type="date" class="vo-date-input" id="date-from" />
+            </div>
+            <div class="vo-date-row">
+              <label>Au</label>
+              <input type="date" class="vo-date-input" id="date-to" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Duration -->
+        <div class="vo-filter-group">
+          <div class="vo-filter-title" data-collapse="dur">
+            <span><i class="fa-regular fa-clock"></i> Durée</span>
+            <i class="fa-solid fa-chevron-down vo-chevron"></i>
+          </div>
+          <div class="vo-filter-body" id="filter-dur">
+            <label class="vo-check"
+              ><input type="checkbox" value="1-3" /><span></span>1–3
+              jours</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="4-7" /><span></span>4–7
+              jours</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="8-14" checked /><span></span>8–14
+              jours</label
+            >
+            <label class="vo-check"
+              ><input type="checkbox" value="15+" /><span></span>15 jours et
+              +</label
+            >
+          </div>
+        </div>
+
+        <!-- Stars -->
+        <div class="vo-filter-group">
+          <div class="vo-filter-title" data-collapse="stars">
+            <span><i class="fa-regular fa-star"></i> Note minimale</span>
+            <i class="fa-solid fa-chevron-down vo-chevron"></i>
+          </div>
+          <div class="vo-filter-body" id="filter-stars">
+            <div class="vo-star-filter">
+              <button class="vo-star-btn active" data-min="0">Tous</button>
+              <button class="vo-star-btn" data-min="3">3★+</button>
+              <button class="vo-star-btn" data-min="4">4★+</button>
+              <button class="vo-star-btn" data-min="4.5">4.5★+</button>
+            </div>
+          </div>
+        </div>
+
+        <button class="vo-apply-btn" id="vo-apply">
+          <i class="fa-solid fa-magnifying-glass"></i> Appliquer les filtres
+        </button>
+      </aside>
+
+      <!-- ─── MAIN CONTENT ─── -->
+      <main class="vo-main">
+        <!-- Toolbar -->
+        <div class="vo-toolbar">
+          <div class="vo-results-count" id="vo-count">
+            <strong>12</strong> voyages trouvés
+          </div>
+          <div class="vo-toolbar-right">
+            <!-- Sort -->
+            <div class="vo-sort-wrap">
+              <label
+                ><i class="fa-solid fa-arrow-up-wide-short"></i> Trier
+                par</label
+              >
+              <select id="vo-sort" class="vo-sort-select">
+                <option value="pop">Popularité</option>
+                <option value="price-asc">Prix croissant</option>
+                <option value="price-desc">Prix décroissant</option>
+                <option value="rating">Meilleures notes</option>
+                <option value="duration">Durée</option>
+              </select>
+            </div>
+            <!-- View toggle -->
+            <div class="vo-view-toggle">
+              <button class="vo-view-btn active" id="btn-grid" title="Grille">
+                <i class="fa-solid fa-grip"></i>
+              </button>
+              <button class="vo-view-btn" id="btn-list" title="Liste">
+                <i class="fa-solid fa-list"></i>
+              </button>
+            </div>
+            <!-- Mobile filter toggle -->
+            <button class="vo-filter-toggle" id="vo-filter-toggle">
+              <i class="fa-solid fa-sliders"></i> Filtres
+            </button>
+          </div>
+        </div>
+
+        <!-- Cards grid -->
+        <div class="vo-grid" id="vo-grid">
+          <!-- CARD 1-->
+          <article
+            class="vo-card"
+            data-type="culture"
+            data-price="2450"
+            data-rating="4.9"
+            data-dur="10"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <div class="vo-card-img-wrap">
+              <img src="../images/home_2.jpeg" alt="Portugal" loading="lazy" />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-new">Nouveau</span>
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 9 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-culture">Culture</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / EN</span
+                >
+              </div>
+              <h3 class="vo-card-title">Portugal &amp; Espagne</h3>
+              <p class="vo-card-desc">
+                VISA EN GROUPE DISPO <br />Lisbonne ,Porto ,Madrid&amp; Séville
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> Portugal &amp;
+                  Espagne</span
+                >
+                <span><i class="fa-solid fa-users"></i> en groupe</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> chaque lundi</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="vo-rating-val">4.9</span>
+                <span class="vo-rating-count">(208 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">6 980 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="./programme.html" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+          <!-- CARD 2 -->
+          <article
+            class="vo-card"
+            data-type="aventure"
+            data-price="1890"
+            data-rating="4.8"
+            data-dur="8"
+            data-aos="fade-up"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="../images/home_1.webp"
+                alt="usa mexique"
+                loading="lazy"
+              />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-hot"
+                  ><i class="fa-solid fa-fire"></i> Populaire</span
+                >
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist" title="Ajouter aux favoris">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 9 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-type">Aventure</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / AR</span
+                >
+              </div>
+              <h3 class="vo-card-title">USA &amp; Mexique</h3>
+              <p class="vo-card-desc">
+                Houston , Monterrey , San Antonio , Dallas & Kansas City ,
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> USA &amp;
+                  Mexique</span
+                >
+                <span><i class="fa-solid fa-users"></i> en groupe.</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> 19 Juil – 28
+                  Juil</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="vo-rating-val">4.8</span>
+                <span class="vo-rating-count">(312 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">15 980 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="./programme.html" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 3 -->
+          <article
+            class="vo-card"
+            data-type="plage"
+            data-price="3200"
+            data-rating="4.7"
+            data-dur="7"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="../images/home_10.jpg"
+                alt="Europe Centrale"
+                loading="lazy"
+              />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-hot"
+                  ><i class="fa-solid fa-fire"></i> Populaire</span
+                >
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 7 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-plage">Plage</span>
+                <span class="vo-tag vo-tag-luxe">Luxe</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / EN</span
+                >
+              </div>
+              <h3 class="vo-card-title">Europe Centrale</h3>
+              <p class="vo-card-desc">
+                Venise , Ljubljana , Vienne , Bratisalava , Dresden &amp; Prague
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> Europe
+                  Centrale</span
+                >
+                <span><i class="fa-solid fa-users"></i> en groupe</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> 28Juil –
+                  6Aout</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="vo-rating-val">4.7</span>
+                <span class="vo-rating-count">(174 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">6 980 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 4 -->
+          <article
+            class="vo-card"
+            data-type="famille"
+            data-price="1650"
+            data-rating="4.6"
+            data-dur="5"
+            data-aos="fade-up"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1555993539-1732b0258235?w=600&q=80"
+                alt="Djerba Famille"
+                loading="lazy"
+              />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-promo">−15%</span>
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 5 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-famille">Famille</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / AR</span
+                >
+              </div>
+              <h3 class="vo-card-title">Djerba en Famille — Île des Rêves</h3>
+              <p class="vo-card-desc">
+                Plages de sable blanc, crocodile parc, médina de Houmt Souk et
+                soirées folkloriques pour des vacances inoubliables en famille.
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> Djerba,
+                  Tunisie</span
+                >
+                <span><i class="fa-solid fa-users"></i> Famille</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> Été /
+                  Automne</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="vo-rating-val">4.6</span>
+                <span class="vo-rating-count">(289 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">1 650 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 5 -->
+          <article
+            class="vo-card"
+            data-type="luxe"
+            data-price="4800"
+            data-rating="5.0"
+            data-dur="12"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80"
+                alt="Dubai Luxe"
+                loading="lazy"
+              />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-luxe"
+                  ><i class="fa-solid fa-crown"></i> Premium</span
+                >
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 12 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-luxe">Luxe</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / EN / AR</span
+                >
+              </div>
+              <h3 class="vo-card-title">Dubai &amp; Abu Dhabi — Grand Luxe</h3>
+              <p class="vo-card-desc">
+                Burj Khalifa, desert safari en 4×4, Louvre Abu Dhabi, hôtels 5
+                étoiles et shopping dans les plus beaux malls du monde.
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> Émirats Arabes
+                  Unis</span
+                >
+                <span><i class="fa-solid fa-users"></i> 4–12 pers.</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> Oct – Mars</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                </div>
+                <span class="vo-rating-val">5.0</span>
+                <span class="vo-rating-count">(97 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">4 800 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 6 -->
+          <article
+            class="vo-card"
+            data-type="culture"
+            data-price="2190"
+            data-rating="4.7"
+            data-dur="9"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=600&q=80"
+                alt="Italie"
+                loading="lazy"
+              />
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 9 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-culture">Culture</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / IT</span
+                >
+              </div>
+              <h3 class="vo-card-title">Grande Traversée Italienne</h3>
+              <p class="vo-card-desc">
+                Rome, Florence, Venise, Cinque Terre — une odyssée à travers la
+                Botte entre art, gastronomie et paysages à couper le souffle.
+              </p>
+              <div class="vo-card-info">
+                <span><i class="fa-solid fa-location-dot"></i> Italie</span>
+                <span><i class="fa-solid fa-users"></i> 10–22 pers.</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> Avr – Oct</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="vo-rating-val">4.7</span>
+                <span class="vo-rating-count">(255 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">2 190 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 7 -->
+          <article
+            class="vo-card"
+            data-type="aventure"
+            data-price="2890"
+            data-rating="4.8"
+            data-dur="14"
+            data-aos="fade-up"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=600&q=80"
+                alt="Turquie"
+                loading="lazy"
+              />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-new">Nouveau</span>
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 14 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-type">Aventure</span>
+                <span class="vo-tag vo-tag-culture">Culture</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / TR</span
+                >
+              </div>
+              <h3 class="vo-card-title">
+                Turquie Complète — Istanbul à Antalya
+              </h3>
+              <p class="vo-card-desc">
+                Cappadoce en montgolfière, côte turquoise en gulet,
+                Sainte-Sophie, bazar couvert — deux semaines au carrefour de
+                l'Orient et de l'Occident.
+              </p>
+              <div class="vo-card-info">
+                <span><i class="fa-solid fa-location-dot"></i> Turquie</span>
+                <span><i class="fa-solid fa-users"></i> 8–18 pers.</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> Avr – Oct</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="vo-rating-val">4.8</span>
+                <span class="vo-rating-count">(183 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">2 890 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 8 -->
+          <article
+            class="vo-card"
+            data-type="plage"
+            data-price="1350"
+            data-rating="4.5"
+            data-dur="6"
+            data-aos="fade-up"
+            data-aos-delay="60"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80"
+                alt="Hammamet"
+                loading="lazy"
+              />
+              <div class="vo-card-badges">
+                <span class="vo-badge vo-badge-promo">−20%</span>
+              </div>
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 6 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-plage">Plage</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / AR</span
+                >
+              </div>
+              <h3 class="vo-card-title">
+                Hammamet &amp; Cap Bon — Détente Absolue
+              </h3>
+              <p class="vo-card-desc">
+                Hôtel 5★ sur la plage, excursion Cap Bon, spa, gastronomie
+                tunisienne et soirées animées pour une semaine de pur bonheur.
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> Hammamet,
+                  Tunisie</span
+                >
+                <span><i class="fa-solid fa-users"></i> 2–20 pers.</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> Mai – Sep</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-regular fa-star"></i>
+                </div>
+                <span class="vo-rating-val">4.5</span>
+                <span class="vo-rating-count">(421 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">1 350 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- CARD 9 -->
+          <article
+            class="vo-card"
+            data-type="sahara"
+            data-price="980"
+            data-rating="4.6"
+            data-dur="3"
+            data-aos="fade-up"
+            data-aos-delay="120"
+          >
+            <div class="vo-card-img-wrap">
+              <img
+                src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&q=80"
+                alt="Tozeur Sahara"
+                loading="lazy"
+              />
+              <div class="vo-card-overlay">
+                <button class="vo-wishlist">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              </div>
+              <div class="vo-card-duration">
+                <i class="fa-regular fa-clock"></i> 3 jours
+              </div>
+            </div>
+            <div class="vo-card-body">
+              <div class="vo-card-tags">
+                <span class="vo-tag vo-tag-sahara">Désert</span>
+                <span class="vo-tag vo-tag-lang"
+                  ><i class="fa-solid fa-language"></i> FR / AR / EN</span
+                >
+              </div>
+              <h3 class="vo-card-title">Week-end Magique à Tozeur</h3>
+              <p class="vo-card-desc">
+                Chameaux sur les dunes, nuit sous les étoiles dans un campement
+                berbère, lever de soleil sur le Chott El-Jérid.
+              </p>
+              <div class="vo-card-info">
+                <span
+                  ><i class="fa-solid fa-location-dot"></i> Tozeur,
+                  Tunisie</span
+                >
+                <span><i class="fa-solid fa-users"></i> 4–12 pers.</span>
+                <span
+                  ><i class="fa-solid fa-calendar-check"></i> Oct – Avr</span
+                >
+              </div>
+              <div class="vo-card-rating">
+                <div class="vo-stars">
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i
+                  ><i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <span class="vo-rating-val">4.6</span>
+                <span class="vo-rating-count">(198 avis)</span>
+              </div>
+              <div class="vo-card-footer">
+                <div class="vo-price">
+                  <span class="vo-price-from">À partir de</span>
+                  <span class="vo-price-val">980 TND</span>
+                  <span class="vo-price-per">/pers.</span>
+                </div>
+                <a href="#" class="vo-detail-btn"
+                  >Voir détails <i class="fa-solid fa-arrow-right"></i
+                ></a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!-- /vo-grid -->
+
+        <!-- ─── PAGINATION ─── -->
+        <div class="vo-pagination" id="vo-pagination">
+          <button class="vo-page-btn vo-page-prev" id="pg-prev" disabled>
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="vo-page-btn active" data-page="1">1</button>
+          <button class="vo-page-btn" data-page="2">2</button>
+          <button class="vo-page-btn" data-page="3">3</button>
+          <span class="vo-page-ellipsis">…</span>
+          <button class="vo-page-btn" data-page="6">6</button>
+          <button class="vo-page-btn vo-page-next" id="pg-next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </main>
+    </div>
+    <!-- /vo-layout -->
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="vol-footer">
+      <div class="container">
+        <div class="vol-footer-grid">
+          <!-- Brand -->
+          <div class="vol-footer-brand">
+            <a
+              href="index.html"
+              class="nav-logo"
+              style="margin-bottom: 18px; display: inline-flex"
+            >
+              <img
+                width="200"
+                src="../images/logo_jektis.png"
+                alt="Jektis Travel"
+              />
+            </a>
+            <p>
+              Votre agence de voyage de confiance en Tunisie. Des billets
+              d'avion aux séjours tout compris, nous vous accompagnons partout
+              dans le monde.
+            </p>
+            <div class="vol-footer-social">
+              <a href="#" aria-label="Facebook"
+                ><i class="fa-brands fa-facebook-f"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
+              ></a>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Links -->
+          <div class="vol-footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li>
+                <a href="vol.html"
+                  ><i class="fa-solid fa-plane fa-xs"></i> Vols</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-building fa-xs"></i> Hôtels</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-map fa-xs"></i> Voyages organisés</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-id-card fa-xs"></i> Visa</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-briefcase fa-xs"></i> Entreprises</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Destinations -->
+          <div class="vol-footer-col">
+            <h4>Destinations</h4>
+            <ul>
+              <li><a href="#">Paris</a></li>
+              <li><a href="#">Londres</a></li>
+              <li><a href="#">Istanbul</a></li>
+              <li><a href="#">Dubai</a></li>
+              <li><a href="#">Rome</a></li>
+              <li><a href="#">Montréal</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="vol-footer-col">
+            <h4>Contact</h4>
+            <ul class="vol-footer-contact">
+              <li>
+                <i class="fa-solid fa-phone"></i><span>+216 71 706 900</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i
+                ><span>+216 98 538 070</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><span>contact@jektistravel.tn</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Agence Ariana: 89 AV H Bourguiba 2éme Etage Ariana</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Agence Menzah 9: 22 AV Abdelaziz Thaalbi Menzah 9A</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i
+                ><span>Lun – Ven : 8:30h – 18h</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i
+                ><span>Lun – Ven : 8:30h – 13:30h</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="vol-footer-bottom">
+          <span>© 2026 Jektis Travel — Tous droits réservés</span>
+          <div class="vol-footer-bottom-links">
+            <a href="#">Mentions légales</a>
+            <a href="#">Politique de confidentialité</a>
+            <a href="#">CGV</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/voyage-organise_script.js"></script>
+  </body>
+</html>

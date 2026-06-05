@@ -6,6 +6,7 @@
     <title>Portugal — Lisbonne & Porto | Jektis Travel</title>
     <link rel="stylesheet" href="../css/global.css" />
     <link rel="stylesheet" href="../css/programme.css" />
+    <link rel="stylesheet" href="../css/vol.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
@@ -15,79 +16,123 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
+    <link rel="stylesheet" href="../css/navbar.css" />
   </head>
   <body style="background: var(--bg)">
-    <!-- ══════════════════════════════════════════
-     NAVBAR
-══════════════════════════════════════════ -->
-    <nav id="navbar" class="visible">
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav id="navbar" class="scrolled visible">
       <div class="nav-inner">
-        <!-- Logo -->
-        <a href="#" class="nav-logo">
+        <a href="../index.html" class="nav-logo">
           <img
             width="150"
             src="../images/logo_jektis.png"
-            alt="Jektis Travel Logo"
+            alt="Jektis Travel"
           />
         </a>
-
-        <!-- Menu -->
+        <!-- Desktop menu -->
         <ul class="nav-menu">
-          <!-- Séjours en Tunisie dropdown -->
           <li class="nav-item">
-            <a href="../pages/confirm-reservation.html" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="fa-regular fa-map"></i> Séjours en Tunisie
               <i class="fa-solid fa-chevron-down"></i>
             </a>
             <div class="dropdown">
               <a href="#"
-                ><i class="fa-regular fa-building mr-1"></i> Hôtels Tunis</a
+                ><i class="fa-regular fa-building"></i> Hôtels Tunis</a
               >
-              <a href="#"><i class="fa-regular fa-sun mr-1"></i> Hammamet</a>
-              <a href="#"><i class="fa-regular fa-compass mr-1"></i> Korba</a>
-              <a href="#"><i class="fa-regular fa-map-dot mr-1"></i> Nabeul</a>
-              <a href="#">Korbous</a>
-              <a href="#">Sousse</a>
-              <a href="#">Monastir</a>
-              <a href="#">Mahdia</a>
-              <a href="#">Tabarka</a>
-              <a href="#">Ain Draham</a>
-              <a href="#">Tozeur</a>
-              <a href="#">Djerba</a>
-              <a href="#">Kairouan</a>
-              <a href="#">Sfax</a>
+              <a href="#"><i class="fa-regular fa-sun"></i> Hammamet</a>
+              <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Korbous</a
+              ><a href="#">Sousse</a> <a href="#">Monastir</a
+              ><a href="#">Mahdia</a> <a href="#">Tabarka</a
+              ><a href="#">Ain Draham</a> <a href="#">Tozeur</a
+              ><a href="#">Djerba</a>
             </div>
           </li>
           <li class="nav-item">
-            <a href="../pages/programme.html" class="nav-link"
-              ><i class="fa-solid fa-truck-plane"></i> Programmes</a
+            <a href="voyage-organise.html" class="nav-link"
+              ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</a
             >
           </li>
           <li class="nav-item">
-            <a href="../pages/vol.html" class="nav-link"
+            <a href="vol.html" class="nav-link"
               ><i class="fa-solid fa-plane-departure"></i> Vols</a
             >
           </li>
           <li class="nav-item">
-            <a href="../pages/auth.html" class="nav-link"
+            <a href="#" class="nav-link"
               ><i class="fa-regular fa-id-card"></i> Visa</a
             >
           </li>
+
           <li class="nav-item">
-            <a href="../pages/reservations.html" class="nav-link"
-              ><i class="fa-solid fa-car-rear"></i> Réservations</a
+            <a href="reservations.html" class="nav-link"
+              ><i class="fa-solid fa-ticket"></i> Réservations</a
             >
           </li>
         </ul>
-
-        <!-- Actions -->
         <div class="nav-actions">
-          <a href="../pages/auth.html" class="nav-login btn">
+          <button class="nav-hamburger" id="nav-hamburger" aria-label="Menu">
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+            <span class="ham-bar"></span>
+          </button>
+          <a href="auth.html" class="nav-login btn">
             <i class="fa-regular fa-user"></i> Connexion
           </a>
         </div>
       </div>
     </nav>
+
+    <!-- Mobile drawer -->
+    <div class="nav-mobile-drawer" id="nav-mobile-drawer">
+      <div class="mob-item" data-has-dropdown>
+        <a href="#" class="mob-link">
+          <span class="mob-link-left"
+            ><i class="fa-regular fa-map"></i> Séjours en Tunisie</span
+          >
+          <i class="fa-solid fa-chevron-down mob-chevron"></i>
+        </a>
+        <div class="mob-dropdown">
+          <a href="#">Hôtels Tunis</a><a href="#">Hammamet</a>
+          <a href="#">Korba</a><a href="#">Nabeul</a> <a href="#">Sousse</a
+          ><a href="#">Djerba</a> <a href="#">Tozeur</a><a href="#">Tabarka</a>
+        </div>
+      </div>
+
+      <div class="mob-item">
+        <a href="voyage-organise.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-earth-africa"></i> Voyages Organisés</span
+          ></a
+        >
+      </div>
+      <div class="mob-item">
+        <a href="vol.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-plane-departure"></i> Vols</span
+          ></a
+        >
+      </div>
+      <div class="mob-item">
+        <a href="#" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-regular fa-id-card"></i> Visa</span
+          ></a
+        >
+      </div>
+
+      <div class="mob-item">
+        <a href="reservations.html" class="mob-link"
+          ><span class="mob-link-left"
+            ><i class="fa-solid fa-ticket"></i> Réservations</span
+          ></a
+        >
+      </div>
+      <a href="auth.html" class="mob-login"
+        ><i class="fa-regular fa-user"></i> Connexion</a
+      >
+    </div>
+    <div class="nav-backdrop" id="nav-backdrop"></div>
 
     <!-- ══════════════════════════════════════════
      HERO
@@ -1711,9 +1756,9 @@
                   <span class="total-amount" id="booking-total">0 TND</span>
                 </div>
 
-                <button class="book-btn">
+                <a href="./confirm-reservation.html" class="book-btn">
                   <i class="fa-solid fa-lock"></i> Réserver ce voyage
-                </button>
+                </a>
 
                 <p
                   style="
@@ -1840,224 +1885,128 @@
       <!-- /container -->
     </main>
 
-    <!-- ═══════════════════════════════════════════════
-     FOOTER
-════════════════════════════════════════════════ -->
-    <footer>
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="vol-footer">
       <div class="container">
-        <!-- Main Footer -->
-        <div class="footer-top">
+        <div class="vol-footer-grid">
           <!-- Brand -->
-          <div class="footer-brand">
-            <div class="nav-logo" style="margin-bottom: 12px">
-              <svg width="32" height="32" viewBox="0 0 90 90" fill="none">
-                <circle
-                  cx="45"
-                  cy="45"
-                  r="44"
-                  stroke="#BBCC1C"
-                  stroke-width="2"
-                  opacity="0.7"
-                />
-                <path
-                  d="M45 15 C30 15 20 25 18 38 L45 42 L72 38 C70 25 60 15 45 15Z"
-                  fill="#0B64B8"
-                />
-                <path d="M18 38 C16 52 22 65 34 72 L45 42Z" fill="#3C8BD8" />
-                <path
-                  d="M72 38 C74 52 68 65 56 72 L45 42Z"
-                  fill="#3C8BD8"
-                  opacity="0.8"
-                />
-                <path
-                  d="M34 72 C38 76 45 78 45 78 C45 78 52 76 56 72 L45 42Z"
-                  fill="#BBCC1C"
-                />
-                <circle cx="45" cy="42" r="5" fill="#fff" />
-              </svg>
-              <span class="nav-logo-text" style="font-size: 1.25rem"
-                >Jektis<span>Travel</span></span
-              >
-            </div>
+          <div class="vol-footer-brand">
+            <a
+              href="index.html"
+              class="nav-logo"
+              style="margin-bottom: 18px; display: inline-flex"
+            >
+              <img
+                width="200"
+                src="../images/logo_jektis.png"
+                alt="Jektis Travel"
+              />
+            </a>
             <p>
-              Votre Agence de Voyage en Tunisie en Ligne. Promotions sur vos
-              Voyages et Séjours en Tunisie et dans le Monde avec les Meilleurs
-              Prix et Services.
+              Votre agence de voyage de confiance en Tunisie. Des billets
+              d'avion aux séjours tout compris, nous vous accompagnons partout
+              dans le monde.
             </p>
-            <div class="footer-social">
-              <a href="#" class="social-btn" aria-label="WhatsApp"
-                ><i class="fa-brands fa-whatsapp"></i
-              ></a>
-              <a href="#" class="social-btn" aria-label="Facebook"
+            <div class="vol-footer-social">
+              <a href="#" aria-label="Facebook"
                 ><i class="fa-brands fa-facebook-f"></i
               ></a>
-              <a href="#" class="social-btn" aria-label="TikTok"
-                ><i class="fa-brands fa-tiktok"></i
-              ></a>
-              <a href="#" class="social-btn" aria-label="Instagram"
+              <a href="#" aria-label="Instagram"
                 ><i class="fa-brands fa-instagram"></i
               ></a>
-              <a href="#" class="social-btn" aria-label="LinkedIn"
-                ><i class="fa-brands fa-linkedin-in"></i
+              <a href="#" aria-label="Twitter"
+                ><i class="fa-brands fa-x-twitter"></i
               ></a>
-              <a href="#" class="social-btn" aria-label="YouTube"
-                ><i class="fa-brands fa-youtube"></i
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fa-brands fa-whatsapp"></i
               ></a>
-            </div>
-            <div class="payment-icons">
-              <span
-                ><i
-                  class="fa-solid fa-lock mr-1"
-                  style="color: #bbcc1c; font-size: 0.65rem"
-                ></i>
-                Visa</span
-              >
-              <span>Mastercard</span>
-              <span>Virement</span>
-              <span
-                ><i
-                  class="fa-solid fa-shield-halved mr-1"
-                  style="color: #bbcc1c; font-size: 0.65rem"
-                ></i>
-                Sécurisé</span
-              >
             </div>
           </div>
 
-          <!-- Nos produits -->
-          <div class="footer-col">
-            <h4>Nos Produits</h4>
+          <!-- Links -->
+          <div class="vol-footer-col">
+            <h4>Services</h4>
             <ul>
-              <li><a href="#">Hôtels Tunisie</a></li>
-              <li><a href="#">Circuit Tunisie</a></li>
-              <li><a href="#">Tunis–Paris</a></li>
-              <li><a href="#">Coffret Cadeau</a></li>
-              <li><a href="#">Réveillon Tunisie</a></li>
-              <li><a href="#">Saint Valentin</a></li>
-              <li><a href="#">Vente Flash</a></li>
-              <li><a href="#">Parc Carthage Land</a></li>
+              <li>
+                <a href="vol.html"
+                  ><i class="fa-solid fa-plane fa-xs"></i> Vols</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-building fa-xs"></i> Hôtels</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-map fa-xs"></i> Voyages organisés</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-id-card fa-xs"></i> Visa</a>
+              </li>
+              <li>
+                <a href="#"
+                  ><i class="fa-solid fa-briefcase fa-xs"></i> Entreprises</a
+                >
+              </li>
             </ul>
           </div>
 
-          <!-- Nos hôtels -->
-          <div class="footer-col">
-            <h4>Nos Hôtels</h4>
+          <!-- Destinations -->
+          <div class="vol-footer-col">
+            <h4>Destinations</h4>
             <ul>
-              <li><a href="#">Hôtels Tunis</a></li>
-              <li><a href="#">Hôtels Tabarka</a></li>
-              <li><a href="#">Hôtels Hammamet</a></li>
-              <li><a href="#">Hôtels Sousse</a></li>
-              <li><a href="#">Hôtels Monastir</a></li>
-              <li><a href="#">Hôtels Mahdia</a></li>
-              <li><a href="#">Hôtels Djerba</a></li>
-              <li><a href="#">Hôtels Tozeur</a></li>
-              <li><a href="#">Hôtels Recommandés</a></li>
+              <li><a href="#">Paris</a></li>
+              <li><a href="#">Londres</a></li>
+              <li><a href="#">Istanbul</a></li>
+              <li><a href="#">Dubai</a></li>
+              <li><a href="#">Rome</a></li>
+              <li><a href="#">Montréal</a></li>
             </ul>
           </div>
 
-          <!-- Nos promos -->
-          <div class="footer-col">
-            <h4>Nos Promos</h4>
-            <ul>
-              <li><a href="#">Promo du Mois</a></li>
-              <li><a href="#">Last Minute</a></li>
-              <li><a href="#">Promos Ramadan</a></li>
-              <li><a href="#">Promos Aid</a></li>
-              <li><a href="#">Early Booking</a></li>
-              <li><a href="#">Gratuités Enfants</a></li>
-              <li><a href="#">Circuits Sud Tunisie</a></li>
-              <li><a href="#">Circuits Djerba</a></li>
-            </ul>
-          </div>
-
-          <!-- Vacances par thème -->
-          <div class="footer-col">
-            <h4>Par Thème</h4>
-            <ul>
-              <li><a href="#">Luxe &amp; Prestige</a></li>
-              <li><a href="#">Petit Budget</a></li>
-              <li><a href="#">Voyages de Noce</a></li>
-              <li><a href="#">Séjours d'Exception</a></li>
-              <li><a href="#">Voyages Sans Visa</a></li>
-              <li><a href="#">Top Vente</a></li>
-              <li><a href="#">TRE</a></li>
+          <!-- Contact -->
+          <div class="vol-footer-col">
+            <h4>Contact</h4>
+            <ul class="vol-footer-contact">
+              <li>
+                <i class="fa-solid fa-phone"></i><span>+216 71 706 900</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i
+                ><span>+216 98 538 070</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><span>contact@jektistravel.tn</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Agence Ariana: 89 AV H Bourguiba 2éme Etage Ariana</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-dot"></i
+                ><span>Agence Menzah 9: 22 AV Abdelaziz Thaalbi Menzah 9A</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i
+                ><span>Lun – Ven : 8:30h – 18h</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i
+                ><span>Lun – Ven : 8:30h – 13:30h</span>
+              </li>
             </ul>
           </div>
         </div>
 
-        <!-- Extra info footer -->
-        <div class="footer-extra">
-          <div class="footer-extra-col">
-            <h5>Informations Utiles</h5>
-            <ul>
-              <li><a href="#">Qui sommes-nous ?</a></li>
-              <li><a href="#">Conditions de vente</a></li>
-              <li><a href="#">Jektis vous répond</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Points de ventes</a></li>
-              <li><a href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer-extra-col" style="grid-column: span 2">
-            <h5>Contact</h5>
-            <div class="footer-address">
-              <strong>Adresse</strong>
-              Angle rue des Entrepreneurs et rue du Métal<br />
-              Immeuble SOFIDE, 3ème étage<br />
-              Z.I Charguia II — 2035 Tunis Carthage<br /><br />
-              <strong>Téléphone</strong>
-              Tél : +(216) 70 103 103<br />
-              Fax : +(216) 71 942 682
-            </div>
-          </div>
-          <div
-            class="footer-extra-col"
-            style="
-              grid-column: span 2;
-              display: flex;
-              align-items: flex-end;
-              justify-content: flex-end;
-            "
-          >
-            <div>
-              <svg
-                width="60"
-                height="60"
-                viewBox="0 0 90 90"
-                fill="none"
-                style="opacity: 0.15"
-              >
-                <circle
-                  cx="45"
-                  cy="45"
-                  r="44"
-                  stroke="#BBCC1C"
-                  stroke-width="2"
-                />
-                <path
-                  d="M45 15 C30 15 20 25 18 38 L45 42 L72 38 C70 25 60 15 45 15Z"
-                  fill="#0B64B8"
-                />
-                <path d="M18 38 C16 52 22 65 34 72 L45 42Z" fill="#3C8BD8" />
-                <path d="M72 38 C74 52 68 65 56 72 L45 42Z" fill="#3C8BD8" />
-                <path
-                  d="M34 72 C38 76 45 78 45 78 C45 78 52 76 56 72 L45 42Z"
-                  fill="#BBCC1C"
-                />
-                <circle cx="45" cy="42" r="5" fill="#fff" />
-              </svg>
-            </div>
-          </div>
-        </div>
-
-        <!-- Bottom -->
-        <div class="footer-bottom">
-          <p class="footer-copy">©2024 JektisTravel — Tous droits réservés.</p>
-          <div class="footer-legal">
+        <div class="vol-footer-bottom">
+          <span>© 2026 Jektis Travel — Tous droits réservés</span>
+          <div class="vol-footer-bottom-links">
             <a href="#">Mentions légales</a>
             <a href="#">Politique de confidentialité</a>
             <a href="#">CGV</a>
-            <a href="#">Plan du site</a>
           </div>
         </div>
       </div>
@@ -2110,5 +2059,6 @@
         });
       })();
     </script>
+    <script src="../js/navbar.js"></script>
   </body>
 </html>
